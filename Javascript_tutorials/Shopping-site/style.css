@@ -1,0 +1,31 @@
+body{
+    background-color: burlywood;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+button{
+    background-color: green;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    width: 250px;
+    font-size: 20px;
+    color: white;
+}
+p{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.card{
+    border: 1px solid #eaebec;
+    border-radius: 4px;
+}
+img{
+    width: 304px;
+}
+p#error{
+    color: red;
+    font-size: 14px;
+}

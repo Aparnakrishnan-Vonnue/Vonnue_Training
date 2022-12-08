@@ -1,0 +1,124 @@
+body {
+    max-width: 100%;
+    font-family: Arial, Helvetica, sans-serifS;
+    font-weight: normal;
+}
+header nav ul {
+    float: right;
+    font-size: 10.88px;
+    width: 100px;
+    margin: 0px 0px;
+    position:relative;
+    padding: 0;
+}
+header nav ul li{
+    list-style-type: none;
+    margin: 0 5px;
+    display: inline;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    bottom: 70px;
+}
+#banner .logos{
+    display: grid;
+    grid-template-columns: repeat(8,100px);
+    text-align: center;
+    padding: 100px 20px;
+    margin: 100px 200px;
+    max-width: 10px 10px;
+    justify-content:center;
+    gap: 0px;
+    position: relative;
+    right: 400px;
+}
+#banner .logos a{
+    padding: 10px;
+}
+#banner .logos a h4{
+    color: black;
+}
+
+.search_bar {
+    position: relative;
+    bottom: 150px;
+    right: 100px;
+    display: flex;
+    padding: 0;
+    margin:0 500px 0 500px;
+    width: 698px;
+    right: 250px;
+    border: #fc0 2px solid;
+    border-radius: 10px;
+    
+}
+.search_bar input{
+    padding: 10px;
+    width: 55%;
+    border: none;
+    /* border: 2px solid #fc0; */
+    /* border-radius: 10px; */
+    position: fixed;
+}
+.search_bar img{
+    position: relative;
+    right: 60px;
+    top: 10px;
+    left: 580px;
+    padding: 0;
+    width: 30px;
+    height: 15px;
+    border: none;
+}
+.search_bar .button{
+    position: relative;
+    left:606px;
+    background: #fc0;
+    padding: 10px;
+    /* border: 2px solid #fc0; */
+    appearance: auto;
+    letter-spacing: normal;
+    line-height: normal;
+    text-indent: 0px;
+    text-shadow: none;
+   border: #fc0;
+}
+#banner .logos a{
+    margin:50px 0 0;
+    padding:0 22px;
+    border: 0 transparent;
+    text-decoration: none;
+}
+
+
+footer ul{
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    margin-left: 50px;
+    align-self: center;
+}
+footer ul li{
+    margin: 0 20px;
+    list-style-type: none;
+    text-decoration: none;
+}
+footer ul li  a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    top: 100px;
+}
+
+#location p,img,h4{
+    display: inline-block;
+    text-decoration: none;
+    font-weight: normal;
+    position: relative;
+    left: 400px;
+    
+}
+
+    
+   

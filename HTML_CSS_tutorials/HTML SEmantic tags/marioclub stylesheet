@@ -1,0 +1,15 @@
+div{
+  background-color: indianred;
+  text-align: center;
+  font-size: 35px;
+  color: navajowhite
+}
+ul{
+  border:2px dotted indianred;
+  background-color: peachpuff;
+}
+p{
+  font-style: italic;
+  color: darkblue;
+  background-color: yellow;
+}

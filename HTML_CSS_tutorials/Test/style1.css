@@ -1,0 +1,17 @@
+/* Variables */
+:root{
+    --primary: #07691c;
+    --secondary:#2b2b2b;
+    --teritiary: #b5b5b5;
+    --quarternary: #ffe8dc;
+}
+header{
+    background-color: var(--quarternary);
+}
+header .start {
+    display: flex;
+    
+}
+header .start p{
+    justify-content: flex-end;
+}

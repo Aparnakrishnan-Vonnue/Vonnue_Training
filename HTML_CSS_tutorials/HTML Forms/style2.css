@@ -1,0 +1,19 @@
+div{
+    border:2px solid crimson;
+    margin: 20px;
+    padding: 20px;
+}
+h1{
+color: #2f383b;
+background-color: cornflowerblue;
+/*background-image: -moz-linear-gradient(lightcoral) url(https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2015%2F04%2F19%2F08%2F32%2Fmarguerite-729510__340.jpg&imgrefurl=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fflowers%2F&tbnid=sMWA3DpsSdxCqM&vet=12ahUKEwiR7KKOzub6AhXW9zgGHRhlA08QMygBegUIARDeAQ..i&docid=6QnaOLvEQovLfM&w=522&h=340&q=images%20of%20flowers&client=ubuntu&ved=2ahUKEwiR7KKOzub6AhXW9zgGHRhlA08QMygBegUIARDeAQ); */
+}
+p{
+    font-weight: bold;
+    font-style: italic;
+    background-color: aquamarine;
+}
+ul{
+    border: 2px dashed black;
+    background-color: peachpuff;
+    }

@@ -1,0 +1,82 @@
+.hero{
+    background-color: #444;
+    background-image: url(assets/pexels-jordan-benton-1095601.jpg);
+    background-blend-mode: multiply;
+    background-size: 161% 96%;
+    height: 100vh;
+    padding: 1em ;
+    color: white;
+    
+}
+.hero p{
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.hero p span{
+    color: rgb(19, 207, 207);
+}
+.hero h1{
+    text-align: center;
+    color: aqua;
+    letter-spacing: 8px;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: sans-serif;
+    border: 2px solid white;
+    padding: 25px;
+    
+}
+.hero h1 span{
+    font-weight: normal;
+}
+.sales-points{
+    padding: 12vh auto;
+    text-align: center;
+}
+.sales-point{
+    margin: 0 1vw;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border: 1px solid ;
+    outline: 2px solid rgb(27, 11, 11);
+}
+@media screen and (min-width:40rem){
+    .sales-points{
+        display: flex;
+        flex-direction: row;
+        margin-top: 55px;
+    }
+    .sales-point{
+        flex-basis: 30%;
+    }
+    .hero {
+        background-size: cover;
+    }
+    .cta .cta-text h2{
+        text-align: center;
+    }
+    .cta .cta-text p{
+        text-align: center;
+    }
+    .cta .cta-text a.btn{
+        display: inline-block;
+        
+    }
+    .cta .cta-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .cta .cta-text a.btn{
+        background-color: rgb(27, 11, 11);
+        padding: 20px;
+        border-radius: 30px;
+        color: white;
+    }
+    .cta{
+        background-color: #E8E9EB;
+        margin-top: 100px;
+    }
+}

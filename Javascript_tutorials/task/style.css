@@ -1,0 +1,17 @@
+body{
+    text-align: center;
+    background-image: url(image/pexels-fwstudio-129731.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 50px;
+}
+button{
+    font-size: 30px;
+    padding: 20px;
+    width: 300px;
+    background-color: rgb(47, 10, 10);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+}

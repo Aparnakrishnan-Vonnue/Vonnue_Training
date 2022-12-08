@@ -1,0 +1,53 @@
+body{
+    background-image: url(assets/images/pexels-pixabay-459335.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(2px 4px 6px black);
+}
+h1{
+    font-size: 103px;
+    text-align: center;
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px;
+    white-space: nowrap;
+}
+.number h2{
+    font-size: 80px;
+    text-align: center;
+    color: white;
+    background-color: rgba(84, 11, 11, 0.626);
+    padding: 40px;
+    width: 150px;
+    border: 12px solid white;
+}
+.number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button#increment-btn{
+    font-size: 84px;
+    background-color:  rgba(47, 44, 44, 0.626);
+    color: white;
+    padding: 10px;
+    border-radius: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 5px 0 5px;
+}
+button#save-btn{
+    font-size: 55px;
+    position: relative;
+    top: 50px;
+    border-radius: 100%;
+    padding: 24px;
+    background-color:  rgba(47, 44, 44, 0.626);
+    color: white;
+}
+button#save-btn:hover{
+    cursor: pointer;
+    transform: translateY(10px);
+}

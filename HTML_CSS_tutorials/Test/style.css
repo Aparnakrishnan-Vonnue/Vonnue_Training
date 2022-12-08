@@ -1,0 +1,179 @@
+/* Variables */
+:root{
+    --primary: #07691c;
+    --secondary:#2b2b2b;
+    --teritiary: #b5b5b5;
+    --quarternary: #ffe8dc;
+}
+/* body{
+    font-family: 'GTZirkon';
+} */
+
+/* mobile view */
+.lap-container{
+    display: none;
+}
+.container{
+    width: 100%;
+    padding: 15px 15px;
+}
+.container .menu{
+    display: flex;
+    text-align:end;
+    justify-content: flex-end;
+    margin-right: 21px;
+}
+.container .menu a{
+    text-decoration: none;
+    color: #b5b5b5;
+    font-size: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding:3px;
+}
+.container .menu span a:hover{
+    color: var(--primary);
+}
+.banner{
+    background-color: var(--quarternary);
+    background-position: 90% 10%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-weight: normal;
+    margin-left: 20px;
+    width: 100%;
+}
+.banner h1{
+    position: relative;
+    right: 20px;
+}
+.banner h3{
+    font-weight: normal;
+    font-size: 15px;
+    padding: 0 0 0 10px;
+    margin-bottom: 2px;
+}
+.banner h3:hover{
+    color: var(--primary);
+}
+.banner .intro{
+    padding: 16px;
+}
+.banner img{
+    padding: 10px;
+    justify-content: center;
+    align-content: center;
+}
+.posts h2{
+    font-size: 20px;
+    font-weight: normal;
+}
+.posts p{
+    font-size: 15px;
+}
+footer{
+    background-color: #ffff;
+}
+footer .flex{
+    display: flex;
+    column-gap: 100px;
+    padding: 35px 10px;
+
+}
+footer .flex .shortcuts a{
+    display: block;
+    text-decoration: none;
+    color: var(--secondary);
+}
+footer .flex .references a{
+    display: block;
+    text-decoration: none;
+    color: var(--secondary);
+}
+.flex .shortcuts span a{
+    color: var(--teritiary);
+}
+.end p{
+    font-size: 12px;
+    color: var(--teritiary);
+}
+.end span{
+    font-size: 12px;
+    color: var(--teritiary);
+}
+.end span a{
+    font-size: 12px;
+    color: var(--teritiary);
+}
+/* Tablet view */
+@media screen and (min-width:760px){
+    .container .menu{
+        display: flex;
+        text-align: end;
+        justify-content: flex-end;
+        margin-right: 90px;
+    }
+}
+
+
+/* Laptop view */
+@media screen and (min-width:1020px){
+    .container{
+        display: none;
+    }
+    .lap-container{
+        display: flex;
+    }
+    .lap-container .lap-banner{
+        background-color: var(--quarternary);
+        width: 100%;
+        background-position: 80% 20%;
+    }
+    .lap-banner h3{
+        font-size: 10px;
+        transform:rotateY(90 deg)
+    }
+    .lap-banner .intro p{
+    margin-left: 200px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+.posts .post1{
+    display: flex;
+    column-gap: 10px;
+    font-size: 13px;
+}
+.posts .post2{
+    display: flex;
+    column-gap: 10px;
+    font-size: 13px;
+}
+.posts .post3{
+    display: flex;
+    column-gap: 10px;
+    font-size: 13px;
+}
+.posts .post4{
+    display: flex;
+    column-gap: 10px;
+    font-size: 13px;
+}
+.posts .post5{
+    display: flex;
+    column-gap: 10px;
+    font-size: 13px;
+}
+.posts .post1 span{
+    margin-top: 13px;
+}
+.posts .post2 span{
+    margin-top: 13px;
+}
+.posts .post3 span{
+    margin-top: 13px;
+}
+.posts .post4 span{
+    margin-top: 13px;
+}
+.posts .post5 span{
+    margin-top: 13px;
+}
+}

@@ -1,0 +1,8 @@
+
+let errorParagraph = document.getElementById("error") 
+console.log(errorParagraph)
+
+function purchase() {
+    console.log("button clicked")
+    errorParagraph.textContent= "Something Went Wrong, Please try again"
+}

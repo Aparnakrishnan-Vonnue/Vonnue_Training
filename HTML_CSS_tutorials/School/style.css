@@ -1,0 +1,480 @@
+*{
+    box-sizing: border-box;  
+    border: 2px solid red;
+}
+/* body{ */
+    
+    /* background-color: #423f3f; */
+    /* max-width: 100%; */
+    /* 
+    margin-left: 0;
+    margin-right: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-style: italic;
+    
+} */
+body{
+    /* background-image: url(/body-2.jpeg) ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: 50% 50%; */
+    /* overflow-x: hidden; */
+}
+body ul,li,p{
+    text-decoration: none;
+    list-style-type: none;
+}
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    justify-content: flex-end;
+    /* padding: 0; */
+    
+}
+header nav ul li a{
+    text-decoration: none;
+    color: #dddd;
+    font-weight: bold;
+    object-fit: cover;
+    text-align: center;
+    object-position: 50% 50%;
+}    
+/* 
+
+}
+header nav ul li a:hover{
+    cursor: pointer;
+    color: #362121;
+}
+
+.welcome img{
+    position:relative;
+    height:700px;
+    width: 100%;
+}
+ */
+.headings h1{
+    /* position: relative; */
+    color: #ffff;
+    font-size: 80px;
+    justify-content: center;
+    /* bottom: 26vw; */
+    /* left: 25vw; */
+}
+.headings p{
+    /* position: relative; */
+    color: #ffff;
+    font-size: 30px;
+    /* bottom: 28vw;
+    left: 39vw; */
+}
+#Progress_report{
+    display: grid;
+    /* grid-template-columns: repeat(2,1fr); */
+    /* position: relative; */
+    /* bottom: 10vw;
+    left: 80px; */
+    /* margin: 0  400px; */
+    /* justify-content: center; */
+    column-gap: 50px;
+    /* padding: 20px auto; */
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+#Progress_Report .info{
+    border: 2px solid #eeee;
+    padding: 50px;
+    background-color: slategray;
+    position: relative;
+}
+#Progress_Report .Performance{
+    border: 2px solid #eeee;
+    padding: 50px;
+    background-color: slategray;
+    position: relative;
+}
+
+footer #Contact img{
+    padding: 0px;
+    height:50px;
+    /* position: relative;
+    top: 140px;
+    right: 550px; */
+}
+
+/* form */
+/* 
+    
+}
+#form .info{
+    border: 2px solid #eeee;
+    padding: 50px;
+    background-color: slategray;
+    position: relative;
+}
+#form .info:hover{
+    transform: translateY(-3px);
+}
+#form .info h3{
+    margin: 0 100px;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+#form .Performance h3{
+    margin: 0 70px;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+#form .Performance{
+    grid-column: 2/3;
+    border: 2px solid #eeee;
+    padding: 50px;
+    background-color: slategray;
+}
+#form .Performance:hover{
+    transform: translateY(-3px);
+}
+#form .info input{
+    margin: 0 0 20px 0;
+    padding: 10px;
+    border: 3px double slategray;
+    border-start-start-radius: 10px;
+    border-end-end-radius: 10px;
+    
+}
+#form .Performance input{
+    margin: 0 0 20px 0;
+    padding: 10px;
+    border: 3px double slategray;
+    border-start-start-radius: 10px;
+    border-end-end-radius: 10px;
+}
+#form .info select{
+    padding: 10px;
+    border: 3px double slategray;
+    border-start-start-radius: 10px;
+    border-end-end-radius: 10px;
+}
+#form #button{
+    position: relative;
+    justify-content: center;
+    top: 2vw;
+    left: 22vw;
+    padding: 0px;
+}
+#form #button button{
+    border-start-start-radius: 60px;
+    border-end-end-radius: 60px;
+    padding: 10px 20px;
+    border-style: double;
+    border-color: #eeee;
+    color: white;
+    background-color: slategray;
+    font-size: 20px;
+}
+#form #button button:hover{
+    cursor: pointer;
+    color: black;
+
+} */
+/* footer */
+/* footer{
+    border:2px transparent #b0adad;
+    background-color: #b0adad; */
+    /* display: flex; */
+    /* justify-content: center;
+    column-gap: 10px;
+    margin-bottom: 0;
+    padding: 0 100px;
+    height:200px;
+    column-count: 2;
+}
+footer p{
+    position: relative;
+    bottom: 20px;
+    left: 200px;
+}
+
+footer #Contact img:hover{
+    cursor: pointer;
+    transform: translateY(-4px);
+}
+footer #Contact{
+    
+    margin: 0 0 190px 0;
+    position: relative;
+    column-gap: 10px;
+}
+
+footer #Contact ul{
+    position: relative;
+    left: 230px;
+    bottom: 100px;
+}
+footer #Contact ul span{
+    padding: 10px;
+}
+footer #About h4{
+    position: relative;
+    left: 50px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    text-decoration: underline;
+}
+footer #Contact h4{
+    position: relative;
+    left: 250px;
+    margin-bottom: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    text-decoration: underline;
+}
+footer #Contact h4:hover{
+    cursor: pointer;
+    color: slategray;
+}
+footer #About h4:hover{
+    cursor: pointer;
+    color: slategray; 
+} */
+/* Media Queries */
+/* @media screen and (max-width:400px){
+    .welcome img{
+        position: relative;
+        width: 200%;
+        height: 50%;
+    }
+    .welcome h1{
+        position: relative;
+        bottom: 40vw;
+        left: 35vw;
+        font-size: 60px;
+    }
+
+    .welcome p{
+        position: relative;
+        bottom: 45vw;
+        font-size: 45px;
+    }
+    #form{
+        display: grid;
+        align-content: space-between;
+    }
+    #form .Performance{
+        grid-column: -3/-2;
+        align-content: space-between;
+        position: relative;
+        top: 10vw;
+        right: 6vw;
+        margin: 0 50px;
+        padding: 50px;
+        border: none;
+        width: 150%;
+    }
+    #form .info{
+        margin: 0 50px; 
+        padding: 50px; 
+        border: none;
+        width: 150%;
+        position: relative;
+        right: 6vw;
+    }
+    #form #button button{
+        position: relative;
+        top: 100vw;
+        right: 80vw; 
+    }
+    footer{
+        position: relative;
+        top: 600px;
+        width: 150%;
+        height: 100%;
+    } */
+    
+/* } */
+@media screen and (min-width:400px){
+    .welcome img{
+        width: 100%;
+        height: 550px;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+    .headings h1{
+        position: relative;
+        bottom: 49vw;
+        /*left: 30vw; */
+        letter-spacing: 0.7px;
+        text-align: center;
+        object-position: 50% 50%;
+        object-fit: cover;
+    }
+    .headings p{
+        position: relative;
+        bottom: 49vw;
+        /* left: 55vw; */
+        font-size: 14px;
+        font-style: italic;
+        object-position: 50% 50%;
+        object-fit: cover;
+        text-align: center;
+    }
+    #Progress_Report{
+        display: grid;
+    }
+    header{
+        padding: 10px;
+    }
+    header nav ul {
+        column-gap: 200px;
+        align-items: flex-end;
+        margin: 0 0 20px 0;
+    }
+    header nav ul li{
+        /* position: relative;
+        left: 150px; */
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        /* letter-spacing: 2px; */
+    }
+    #Progress_Report{
+        padding: 80px;
+        border:2px double #ffff
+    }
+    #Progress_Report .Performance{
+        position: relative;
+        top: 15px;
+    }
+    #Progress_Report .Performance h3{
+        text-align: center;
+    }
+    #Progress_Report .info h3{
+        text-align: center;
+    }
+    #Progress_Report #button button{
+        position: relative;
+        top: 40px;
+        left: 310px;
+        padding: 20px;
+        width: 150px;
+        border: 2px solid #ffff;
+        background-color: slategray;
+    }
+    #Progress_Report #button button span{
+        font-size: 20px
+    }
+    #Progress_Report .info input{
+        width: 100%;
+        border: 2px double black;
+        padding: 10px;
+    }
+    #Progress_Report .info select{
+        width: 100%;
+        border: 2px double black;
+        padding: 10px;
+    }
+    #Progress_Report .info label{
+        font-weight: bold;
+        font-size: 30px;
+    }
+    #Progress_Report .info select {
+        font-weight: bold;
+        font-size: 30px;
+    }
+    
+    #Progress_Report .Performance input{
+        width: 100%;
+        border: 2px double black;
+        padding: 10px;
+    }
+    #Progress_Report .Performance select{
+        width: 100%;
+        border: 2px double black;
+        padding: 10px;
+    }
+    #Progress_Report .Performance label{
+        font-weight: bold;
+        font-size: 30px;
+    }
+    footer{
+    /* padding:0 300px; */
+    background-color: slategrey;
+    background-position-x: center;
+    /* background-size: 600px; */
+    /* max-width:300%; */
+    /* display: grid;
+    grid-template-columns: repeat(2,1fr); */
+    /* margin-right: 50px; */
+    width:100%;
+    padding: 60px;
+}
+footer #About{
+    border-bottom: 5px solid #0000;
+}
+footer #About h4{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+footer #About li{
+    display: flex;
+    font-size: 30px;
+    font-weight: normal;
+    
+}
+footer #Contact span{
+    position: relative;
+    right: 200px;top: 50px;
+}
+footer #Contact h4{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+footer #Contact li p{
+    display: flex;
+    flex-wrap:wrap;
+    width: 100%;
+}
+footer #Contact li{
+    font-size: 30px;
+    display: flex;
+    fle
+}
+/* @media screen and (min-width:768px){
+    header nav ul{
+        position: relative;
+        left: 30vw;
+    }
+}
+.headings{
+    
+} */
+/* .welcome h1{
+
+}
+#Progress_Report{
+    border: none;
+}
+#Progress_Report .Performance{
+   grid-column: 2/3; 
+   position: relative;
+   left: 600px;
+   padding: 100px;
+}
+footer{
+    width: 206%;
+}
+footer #Contact li p{
+    column-gap: 120px;
+}
+footer #Contact span{
+    position: relative;
+    left: 10px;
+    bottom: 5px;
+}
+footer #Contact img{
+    position: relative;
+    left: 5px;
+} */
+}

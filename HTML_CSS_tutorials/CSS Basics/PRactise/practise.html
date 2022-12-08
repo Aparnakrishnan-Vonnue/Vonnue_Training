@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practise Section</title>
+    </head>
+    <body>
+        <h1>HTML Forms</h1>
+
+         <form>
+            <label for="username">Enter Username:</label>
+            <input type="text" id="username" name="username" placeholder="this is your unique ID" required>
+            <br><br>
+            <label for="email">Enter email_ID  :</label>
+            <input type="email" id="email" name="email" placeholder="your email" required>
+            <br><br>
+            <label for="Password">Enter Password  :</label>
+            <input type="password" id="Password" name="Password" placeholder="strong password required" required>
+
+            <p>Select your age:</p>
+            
+            <input type="radio" name="age" value="10-20" id="option-1" required>
+            <label for="option-1">10-20</label>
+            <input type="radio" name="age" value="21-35" id="option-2" required> 
+            <label for="option-2">21-35</label>
+            <input type="radio" name="age" value="35+" id="option-3" required>
+            <label for="option-3">Above 35
+            </label>
+            <br><br>
+            <label for="question">Security Question:</label>
+            <select name="question" id="question">
+                <option value="q1">What is your favourite food?</option>
+                <option value="q2">What month of the year is your favourite?</option>
+                <option value="q3">what is your favouriite colour</option>
+            </select>
+         <br><br>
+         <label for="answer">Security question answer :</label>
+         <input type="text" id="answer" name="answer">
+         <br><br>
+         <label for="bio">Enter your bio below </label> 
+         <br><br>
+         <textarea name="bio" id="bio" cols="60" rows="10" placeholder="About you...">
+         </textarea>
+         <br><br>
+
+         <input type="button" onclick="alert('Hello world')" value="Click me!"><br><br>
+         <input type="checkbox" name="vehicle1" id="vehicle1">
+         <label for="vehicle1">I have a two wheeler</label><br><br>
+         <input type="checkbox" name="vehicle2" id="vehicle2">
+         <label for="vehicle2">I have a four wheeler</label><br><br>
+         <input type="datetime-local"><br><br>
+         <label for="CV">Upload your CV</label>
+         <input type="file" name="CV" id="CV">
+         <br><br>
+         <input type="hidden">
+         <input type="image" src="img_submit.gif" alt="Submit" width="5cm" height="77cm">
+         <br><br>
+         <label for="phone number">Enter your mobile number</label>
+         <input type="number" name="phone number" id="phone number"><br><br>
+         <label for="landline">Enter your Landline number</label>
+         <input type="tel" name="landline number" id="landline number"><br><br>
+         <label for="range">your experience range in this field</label>
+         <input type="range" name="range" id="range" min="0" max="100"><br><br>
+         <label for="gsearch">Search Google:</label>
+         <input type="search" name="gsearch" id="gsearch"><br><br>
+         <input type="week" name="week" id="week">
+         <input type="reset" name="reset" id="reset">
+
+
+
+
+         <input type="submit" value="Submit Your Form"><br><br>
+         
+        </form>
+    </body>
+</html>

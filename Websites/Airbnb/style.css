@@ -1,0 +1,883 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: regular-font;
+    src: url(/assets/fonts/Airbnb_Cereal-Book-9a1c9cca9bb3d65fefa2aa487617805e.woff2);
+}
+@font-face {
+    font-family: bold-font;
+    src: url(/assets/fonts/Airbnb_Cereal-Bold-bdfb98485e7836ba31b456f65cded088.woff2);
+}
+@font-face {
+    font-family: medium-font;
+    src: url(/assets/fonts/Airbnb_Cereal-Medium-50fc004b3082375f12ff0cfb67bf8e56.woff2);
+}
+.container{
+    width: 100%;
+}
+.container .nav-bar{
+    background: white;
+    width: 100%;
+}
+.container .nav-bar .header-nav{
+    padding: 14px 24px 0 24px;
+}
+.container .nav-bar .header-nav .navbar-flex{
+    background: white;
+    border: 0.5px solid rgba(0,0,0,0.08);
+    box-shadow: 0 3px 10px rgb(0 0 0 /10%);
+    transform: translate3d(0,0,0);
+    border-radius: 1000px;
+    align-items: stretch;
+    display: flex;
+    min-height: 56px;
+    min-width: 285px;
+    color: #222222;
+}
+.container .nav-bar .header-nav .navbar-flex .inner-flex{
+    display: flex;
+    align-items: center;
+    min-width: 100px;
+    width: 100%;
+}
+.container .nav-bar .header-nav .navbar-flex .inner-flex button{
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    background: transparent;
+    border: none;
+}
+.container .nav-bar .header-nav .navbar-flex .inner-flex button .search{
+    padding: 0  20px;
+}
+.container .nav-bar .header-nav .navbar-flex .inner-flex button .search svg{
+    display: block;
+    height: 16px;
+    width: 16px;
+}
+.container .nav-bar .header-nav .navbar-flex .inner-flex button .direction{
+    display: flex;
+    flex-direction: column;
+}
+.container .nav-bar .header-nav .navbar-flex .inner-flex button .navigation{
+    display: flex;
+}
+.container .nav-bar .header-nav .navbar-flex .inner-flex button .navigation .where-to{
+    display: flex;
+    min-width: 50px;
+}
+.container .nav-bar .header-nav .navbar-flex .inner-flex button .navigation .where-to span{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    text-overflow: ellipsis;
+    font-family: regular-font;
+}
+.container .nav-bar .header-nav .navbar-flex .inner-flex button .place-holder{
+    display: flex;
+    min-width: 0;
+    width: 50%;
+}
+.container .nav-bar .header-nav .navbar-flex .inner-flex button .place-holder .anywhere {
+    display: flex;
+    min-width: 50px;
+}
+.container .nav-bar .header-nav .navbar-flex .inner-flex button .place-holder .anywhere span{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 54px;
+    color: #717171;
+    font-size: 12px;
+    line-height: 16px;
+}
+.container .nav-bar .header-nav .navbar-flex .inner-flex button .place-holder .dot{
+    padding: 0 5px;
+    color: #717171;
+    font-size: 12px;
+}
+.container .nav-bar .header-nav .navbar-flex .inner-flex .toggle-menu{
+    display: flex;
+}
+.container .nav-bar .header-nav .navbar-flex .inner-flex .toggle-menu button{
+    position: relative;
+    border-radius: 0px;
+    background: transparent;
+    border: none;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    align-items: center;
+}
+.container .nav-bar .header-nav .navbar-flex .toggle-menu button {
+    border: 1px solid;
+    border-radius: 100%;
+    margin: 0 10px;
+    border-color: #DDDDDD;
+    background-color: #FFFFFF;
+    padding: 8px;
+}
+.container .nav-bar .header-nav .navbar-flex .toggle-menu{
+    padding: 10px 7px;
+    padding-right: 1px;
+    padding-left: 0;
+}
+
+.sub-container {
+    max-width: 1760px;
+    max-height: 74px;
+    display: grid;
+    grid-template-columns: 100%;
+    box-shadow:  0 5px 14px rgb(0 0 0 /14%);
+}
+.container{
+    position: fixed;
+    z-index: 1;
+    background-color: #FFFFFF;
+}
+.container .contents{
+    padding-top: 152px;
+}
+.container .sub-container .container-grid::-webkit-scrollbar{
+    display: none;
+}
+.container .sub-container .container-grid{
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    grid-template-rows: 1fr;
+    overflow-x: scroll;
+    padding: 0 24px;
+    gap: 23px;
+}
+.container .sub-container .container-grid button{
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+    background-color: unset;
+    border: unset;
+    padding: 4px 0 14px;
+    margin: 12px 0 0;
+}
+.container .sub-container .container-grid button:nth-child(1){
+    filter: contrast(7);
+    border-bottom: 2px solid;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.container .sub-container .container-grid button .new-icon{
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+.container .sub-container .container-grid button .new-icon img{
+    margin-right: -1px;
+}
+.container .sub-container .container-grid button .new-icon span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+.container .sub-container .container-grid button .new-icon span img{
+    max-width: 100%;
+    width: 24px;
+    height: auto;
+    filter: contrast(calc(13/44));
+}
+.container .sub-container .container-grid button .new-icon span  .icon-text{
+    white-space: nowrap;
+    position: relative;
+}
+.container .sub-container .container-grid button .new-icon span .icon-text span{
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 16px;
+    color: #717171;
+    font-weight: 600;
+}
+.tab-nav-bar{
+    display: none;
+}
+.sub-container .filters{
+    display: none;
+}
+.main-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 146px;
+}
+.main-container .contents .card-section {
+    margin: 24PX 0;
+}
+.main-container .contents .card-section .card-grid{
+    display: grid;
+    grid-template-rows: repeat(10,1fr);
+    gap: 40px;
+}
+.main-container .contents .card-section .card-grid .card-one{
+  
+    height: 100%;
+    top: 0;
+    width: 100%;
+    outline: none;
+}
+.main-container .contents .card-section .card-grid .card-one .card-image .image picture img{
+    object-fit: cover;
+    max-height: 100%;
+    width: 100%;
+    border-radius: 13px;
+    height: 80vw;
+}
+.image button{
+    position: absolute;
+    right: 16px;
+    top: 10px;
+    border: none;
+    background-color: transparent;
+    border-radius: 50%;
+    margin: 2px 0 0;
+    padding: 2px 0 0;
+}
+.main-container .contents .card-section .card-grid .card-one .card-image .image{
+    position: relative;
+}
+.image-grid{
+    display: grid;
+    margin-top: 10px;
+    gap: 4px;
+}
+.image-grid .section .heading{
+    display: flex;
+    justify-content: space-between;
+}
+.image-grid .rating{
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+.image-grid .section .heading p{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: regular-font;
+}
+.image-grid .description{
+    color: #717171;
+    font-family: regular-font;
+    font-size: 15px;
+}
+.image-grid .price p{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: regular-font;
+    color: #222222;
+    margin-top: 6px;
+}
+ .details{
+   background-color: #F7F7F7;
+    
+}
+footer .footer-container{
+    padding: 0 24px;
+    margin-top: 57px;
+}
+.explore-flex{
+    display: flex;
+    justify-content: center;
+}
+.explore{
+    padding: 30px 0px;
+    margin-top: 6px;
+    border-top: 1px solid #DDDDDD;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.explore h2{
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #222222;
+    font-family: regular-font;
+    white-space: nowrap;
+    font-family: regular-font;
+}
+.explore button{
+    cursor:pointer;
+    font-family: regular-font;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid;
+    padding: 13px 23px;
+    background-color: #FFFFFF;
+}
+.explore .show{
+    display: flex;
+    justify-content: center;
+} 
+.footer-container .footer-flex{
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #DDDDDD;
+}
+.footer-container .footer-flex button{
+    margin-left: -10px;
+    font-family: regular-font;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    color: rgb(34,34,34);
+}
+.footer-container .footer-flex  button.category{
+    border-bottom: 2px solid #222222;
+    border-radius: none;
+}
+.footer-container  h2{
+    font-family: regular-font;
+    font-size: 25px;
+    line-height: 32px;
+    
+}
+.footer-container .activity{
+    display: grid;
+}
+.footer-container .activity .activity-one {
+    padding-top: 24px;
+    max-width: 1120px;
+}
+.footer-container .activity .activity-one span{
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(24, 34, 34);
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: regular-font;
+}
+.footer-container .activity  a{
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(24, 34, 34);
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: regular-font;
+   font-weight: 600;
+}
+.footer-container  .activity-grid{
+    padding-bottom: 32px;
+}
+.footer-container .activity-grid .activity{
+    padding-bottom: 40px;
+}
+.details .support{
+    padding: 32px 24px;
+}
+.details .support .help h4{
+    font-size: 14px;
+    font-family: regular-font;
+    font-weight: 600;
+}
+.details .support .help{
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #DDDDDD;
+    display: grid;
+}
+.details .support .help .help-text p{
+    margin-top: 14px;
+    font-size:14px;
+    line-height: 18px;
+    font-family: regular-font;
+}
+section{
+    padding-inline:24px;
+    margin-bottom: 88px;
+}
+section .language{
+    padding-bottom: 24px;
+   
+}
+section .language .flex{
+    display: flex;
+    gap: 35px;
+}
+section .language .flex .language-globe{
+    display: flex;
+    gap: 10px;
+}
+section .language .flex .language-globe .language-text p{
+    font-weight: 600;
+    font-family: regular-font;
+    font-size: 14px;
+}
+section .language .flex .language-globe .rupee p{
+    font-weight: 600;
+    font-family: regular-font;
+    font-size: 14px;
+}
+section .language {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+section .language .terms .terms-and-conditions p{
+    font-size: 14px;
+    line-height: 18px;
+    font-family: regular-font;
+}
+section .language .terms span{
+    font-size: 16px;
+    font-family:regular-font;
+    
+}
+section .language .social-icons{
+    display: none;
+}
+section .language .terms .terms-and-conditions{
+    display: flex;
+    gap: 12px;
+}
+.user-icons{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0px;
+    left: -10px;
+    gap: 10px;
+    background-color: #FFFFFF;
+    width: 115vw;
+    padding: 24px 0;
+    border-top: 1px solid #DDDDDD;
+}
+.explore-flex{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.map-tab{
+    display: none;
+}
+.map {
+    position: fixed;
+    bottom: 37vw;
+    left: 33vw;
+
+}
+.map button{
+    display: inline-flex;
+    border-radius: 24px;
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 11px 19px;
+    color: rgb(34, 34, 34);
+    align-items: center;
+    justify-content: center;
+    background: rgb(34, 34, 34);
+    gap: 8px;
+}
+.map button span{
+    color: #FFFFFF;
+}
+/* Tablet response */
+@media screen and (min-width:760px){
+    .container .nav-bar{
+        display: none;
+    }
+    .sub-container{
+        box-shadow: none;
+        border-top: 1px solid #DDDDDD;
+    }
+    .container .tab-nav-bar .navbar-flex .lap-airbnb-icon{
+        display: none;
+    }
+    .user-icons{
+        display: none;
+    }
+    .container .tab-nav-bar{
+        display: flex;
+        flex-direction: row;
+        padding: 18px 40px;
+        padding-bottom: 13px;
+        justify-content: space-between;
+    }
+    .container .tab-nav-bar .navbar-flex{
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: center;
+        max-width: 2520px;
+        height: 100%;
+        position: relative;
+        /* width: 100%; */
+        z-index: 1;
+    }
+    .container .tab-nav-bar .direction{
+        padding: 0 24px;
+        display: flex;
+
+    } .container .tab-nav-bar .navbar-flex .airbnb-icon{
+        margin-top: 6px;
+    }
+    .container .tab-nav-bar .direction .direction-flex{
+        text-align: left;
+        background-color: #FFFFFF;
+        border: 1px solid #DDDDDD;
+        border-radius: 40px;
+        box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 /5%);
+        display: inline-flex;
+        padding-inline: 16px;
+        align-items: center;
+        color: #222222;
+        max-width: 100%;
+        width: 100%;
+        height: 51px;
+        padding-right: 2px;
+    }
+    .container .tab-nav-bar .direction .direction-flex button{
+        display: flex;
+        flex: 0 1 auto;
+        height: 48px;
+        min-width: 0;
+        position: relative;
+        z-index: 1;
+        padding-left: 8px;
+        background: transparent;
+        cursor: pointer;
+        padding: 0 16px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        margin: -1px;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 600;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        flex: 1 1 auto;
+        min-width: 80px;
+        padding-top: 12px;
+        padding-left: 7px;
+        border-right: 1px solid #DDDDDD;
+    }
+    .container .tab-nav-bar .direction .direction-flex .search-icon-text {
+        display: flex;
+        gap: 13px;
+    }
+    .container .tab-nav-bar .direction .direction-flex .search-icon-text .search-icon{
+        background-color: #FF385C;
+        margin: 7px 7px 7px 0;
+        border-radius: 50%;
+        padding: 10px;
+        color: #FFFFFF;
+        height: 32px;
+        width: 32px;
+    }
+    .container .tab-nav-bar .direction .direction-flex .search-icon-text .search-icon svg{
+        display: block;
+        fill: none;
+        height: 12px;
+        width: 12px;
+        overflow: visible;
+    }
+    .access .access-flex{
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: flex-end;
+        height: 52px;
+    }
+    .access .access-flex .text-globe{
+        display: flex;
+        flex: 1 1 auto;
+        justify-content: flex-end;
+        margin-right: 8px;
+    }
+    .access .access-flex .text-globe p{
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        padding: 12px;
+        margin: 0;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 600;
+        white-space: nowrap;
+        z-index: 1;
+        font-family: medium-font;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+
+    }
+    .access .access-flex .text-globe picture{
+        position: relative;
+        display: inline;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        margin: 0;
+        padding: 12px;
+    }
+    .access .access-flex .text-globe picture svg{
+        display: block;
+        height: 16px;
+        width: 16px;
+    }
+    .access .access-info{
+        display: block;
+    }
+    
+    .access .access-info .info{
+        display: inline;
+        position: relative;
+    }
+    .access .access-info .info button{
+        padding: 5px 5px 5px 12px;
+        background: transparent;
+        cursor: pointer;
+        margin: 0;
+        background-color: #FFFFFF;
+        border: 1px solid #DDDDDD;
+        border-radius: 21px;
+        display: inline-flex;
+        align-items: center;
+        height: 42px;
+        position: relative;
+    }
+    .access .access-info .info button .hamburger svg{
+        display: block;
+        height: 16px;
+        width: 16px;
+        filter: contrast(calc(13/44));
+        stroke-width: 3;
+    }
+    .access .access-info .info button .profile{
+        margin-left: 12px;
+        color: #717171;
+        flex: 0 0 30px;
+        height: 30px;
+        overflow: hidden;
+        width: 30px;
+        position: relative;
+        z-index: 1;
+    }
+    .container .sub-container .container-grid{
+        padding-left: 40px;
+        gap: 32px;
+    }
+    .main-container .contents ,.card-section{
+        padding-inline: 11px;
+        margin-top: 40px;
+        margin-bottom: 24px;
+    }
+    .access .access-info .info button .red-dot{
+        right: 4px;
+        border-radius: 50%;
+        background-color: #FF385C;
+        box-shadow: 0 0 0 1.5px #FFFFFF;
+        height: 10px;
+        min-width: 10px;
+        top: 2px;
+        position: absolute;
+        z-index: 1;
+    }
+    .sub-container .container-grid {
+        display: grid;
+       grid-template-columns: repeat((22,1fr));
+       grid-template-rows: 1fr;
+       position: relative;
+    }
+    .sub-container .filters{
+        display: inline-flex;
+        flex-direction: row;
+        grid-column: 7/8;
+        position: fixed;
+        right: 0;
+        background-color: #FFFFFF;
+        align-items: center;
+        gap: 22px;
+        padding-top: 18px;
+        padding-right: 39px;
+    }
+    .sub-container .filters .chevron-arrow{
+        border: 0.5px solid rgb(0 0 0 /0.3);
+        border-radius: 50%;
+        background-color: #FFFFFF;
+        width: 26px;
+        height: 25px;
+        align-items: center;
+        justify-content: center;
+        display: block;
+        padding-top: 5px;
+        padding-left: 5px;
+    }
+    .sub-container .filters .toggle{
+        display: flex;
+        flex-basis: fit-content;
+        display: grid;
+        flex: 0 0 auto;
+        place-items: center;
+        position: relative
+    }
+    .sub-container .filters .toggle .filter-toggle{
+        display: flex;
+        border: 1px solid #DDDDDD;
+        padding: 14px;
+        border-radius: 11px;
+    }
+    .main-container .contents .card-section .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+    .main-container .contents .card-section .card-grid .card-one .card-image .image picture img{
+        height: 40vw;
+    }
+    .footer-container .activity-grid .activity{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .details .support .help .help-text{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .details .support .help .help-text p{
+        width: 74%;
+    }
+    section{
+        display: flex;
+        justify-content: center;
+    }
+    .language .flex .social-icons{
+        display: flex;
+        gap: 25px;
+    }
+    .language .flex .terms span{
+        display: flex;
+        justify-content: center;
+    } 
+    .language .flex .terms .terms-and-conditions{
+        justify-content: center;
+        display: flex;
+    }
+    .map{
+        display: none;
+    }
+    .map-tab {
+        position: fixed;
+        bottom: 18vw;
+        left: 42vw;
+        display: flex;
+    
+    }
+    .map-tab button{
+        display: inline-flex;
+        border-radius: 24px;
+        border: 1px solid rgba(0,0,0,0.08);
+        padding: 11px 19px;
+        color: rgb(34, 34, 34);
+        align-items: center;
+        justify-content: center;
+        background: rgb(34, 34, 34);
+        gap: 8px;
+    }
+    .map-tab button span{
+        color: #FFFFFF;
+    }
+}
+@media screen and (min-width:950px){
+    .main-container .contents .card-section .card-grid {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4,1fr);
+    }
+    .main-container .contents .card-section .card-grid .card-one .card-image .image picture img{
+        height: 26vw;
+    }
+    .footer-container .activity-grid .activity{
+        display: grid;
+        grid-template-columns: repeat(4,1fr) !important;
+    }
+ 
+
+}
+@media screen and (min-width:1127px){
+    .container .tab-nav-bar .navbar-flex .lap-airbnb-icon{
+        display: flex;
+    }
+    .container .tab-nav-bar .navbar-flex .airbnb-icon{
+        display: none;
+    }
+    .container .tab-nav-bar{
+        padding: 18px 80px;
+    }
+    .details .support .help{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-container .contents .card-section .card-grid {
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
+    .main-container .contents .card-section .card-grid .card-one .card-image .image picture img{
+        height: 22vw;
+    }
+    .details .support{
+        display: flex;
+        justify-content: space-between;
+    }
+   .details .support .help .help-text{
+    display: flex;
+    flex-direction: column;
+   }
+   section .language{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    
+   }
+   section .language .terms{
+    display: flex;
+    flex-direction: row;
+    gap: 38px;
+    white-space: nowrap;
+   }
+   section .language .flex{
+    white-space: nowrap;
+   }
+}
+@media screen and (min-width:1640px){
+
+    .main-container .contents .card-section .card-grid{
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+    .main-container .contents .card-section .card-grid .card-one .card-image .image picture img{
+        height: 17vw;
+    }
+}
