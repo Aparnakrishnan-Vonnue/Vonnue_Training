@@ -8,11 +8,11 @@
     src: url(assets/font/roboto-regular.woff2);
 }
 @font-face {
-    font-family: 'roboto-bold';
+    font-family: roboto-bold;
     src: url(assets/font/Roboto-Bold.ttf);
 }
 @font-face {
-    font-family: 'roboto-medium';
+    font-family: roboto-medium;
     src: url(assets/font/Roboto-Medium.ttf);
 }
 
@@ -417,7 +417,7 @@
     }
     .tab-nav-bar{
         background-color: #2874f0;
-        height: 51px;
+        height: 52px;
         width: 100%;
         color: #f0f0f0;
         z-index: 10;
@@ -429,10 +429,11 @@
         max-width: 1248px;
         width: 100%;
         height: 100%;
-        justify-content: center;
+        justify-content: flex-end;
         gap: 17px;
+        margin: 0 auto;
         position: relative;
-        right: 14px;
+        left: 47px;
     }
     .nav-bar-flex .empty{
         min-width: 124px;
@@ -442,7 +443,7 @@
         display: flex;
     }
     .nav-bar-flex .logo-flex .logo-img img{
-        width: 66px;
+        width:69px;
     }
     .nav-bar-flex .logo-flex  p{
         font-size: 11px;
@@ -459,24 +460,32 @@
     .nav-bar-flex .logo{
         min-width: 73px;
         justify-content: flex-end;
+        position: relative;
+        left: 20px;
     }
     .nav-bar-flex .logo-flex{
         display: flex;
         flex-direction: column;
 
     }
+    .logo-flex{
+        position: relative;
+        left: 3px;
+    }
     .search-bar{
         display: flex;
         height: 100%;
         min-width: 304px;
         align-items: center;
+        position: relative;
+        left: 15px;
     }
     .search-panel{
         display: inline-block;
         box-shadow: 0 2px 4px 0 rgb(0 0 0/ 23%);
         width: 100%;
-        height: 36px;
-        max-width: 338px;
+        height: 33px;
+        max-width: 286px;
     }
     .search-bar-flex{
         display: flex;
@@ -512,6 +521,10 @@
     .seller p{
         white-space: nowrap;
     }
+    .more{
+        position: relative;
+        right: 3px;
+    }
     .more .more-arrow{
         display: flex;
     }
@@ -520,12 +533,9 @@
         align-items: center;
         cursor: pointer;
         height: 100%;
-        line-height: 20px;
-        font-size: 16px;
-        letter-spacing: 0.1px;
-        font-weight: 500;
         color: #fff;
     }
+
     .login .login-btn{
         color: #2874f0;
         font-weight: 500;
@@ -537,9 +547,14 @@
         background-color: #fff;
     }
     .login .login-btn p{
-        font-size: 16px;
+        font-size: 15px;
         line-height: 20px;
-        font-family: myfont;
+        font-family: roboto-medium;
+        line-height: 20px;
+        letter-spacing: 0.1px;
+        font-weight: 500;
+        color: #2874f0;
+       
     }
     .seller{
         margin: 0 20px;
@@ -549,12 +564,13 @@
     }
     .seller p{
         line-height: 20px;
-        font-size: 16px;
+        font-size: 15px;
         letter-spacing: 0.1px;
         font-weight: 500;
         color: #fff;
-        font-family: myfont;
+        font-family: roboto-medium;
 }
+
 .more .more-arrow{
     display: flex;
     align-items: center;
@@ -562,14 +578,39 @@
 }
 .more .more-arrow p{
     line-height: 20px;
-    font-size: 16px;
+    font-size: 15px;
     letter-spacing: 0.1px;
     font-weight: 500;
     color: #fff;
-    font-family: myfont;
+    font-family: roboto-medium;
 }
 .more .more-arrow svg{
     transform: rotate(270deg);
+    margin-top: 2px;
+}
+.cart{
+    margin: 0 20px;
+    max-width: 150px;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    flex-flow:0 0 auto ; 
+}
+.cart-section{
+    display: flex;
+}
+.cart-section svg{
+    width: 16px;
+    height: 16px;
+    margin: 0 8px;
+}
+.cart-section span{
+    line-height: 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #fff;
+    font-family: roboto-medium;
 }
 .category{
     position: relative;
@@ -589,15 +630,20 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    height: 40px;
+    height: 35px;
     margin: auto;
     position: relative;
+    padding-inline: 10px;
 }
 .category-list span{
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     align-items: center;
-    font-family: myfont;
+    font-family: roboto-medium;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 3px;
 }
 .container{
     margin: 0 auto;
@@ -623,27 +669,34 @@
     flex-flow: column;
 }
 .container .mobile img{
-    width: 270px;
-    height: 145px;
+    width: 257px;
+    height: 135px;
+    position: relative;
+    right: 6px;
 }
 .caption{
     padding: 14px 16px;
     border-top: 1px solid #f0f0f0;
     color: #212121;
+    position: relative;
+    bottom: 4px;
+    right: 2px;
 }
 .caption p{
     font-weight: 500;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.2;
     color: #212121;
+    font-family: roboto-medium;
 }
 .mobile-name {
-    font-size: 12px;
+    font-size: 11px;
     max-height: 31px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    /* overflow: hidden;
+    text-overflow: ellipsis; */
     word-wrap: break-word;
     margin-top: 2px;
+    font-family: myfont;
 }
 .informations{
     display: flex;
@@ -664,8 +717,12 @@
     align-items: center;
 }
 .filter .filter-flex .title span{
-    font-size: 18px;
+    font-size: 17px;
     width: 67%;
+    font-family: roboto-medium;
+    position: relative;
+    bottom: 2px;
+    right: 2px;
 }
 .categories-section .category-one{
     padding: 16px;
@@ -676,6 +733,7 @@
     font-weight: 500;
     color: #212121;
     margin-bottom: 5px;
+    font-family: myfont;
 }
 .mob-accessories{
     padding: 5px 0px;
@@ -694,9 +752,11 @@
     width: 150px;
     overflow: hidden;
     white-space: nowrap;
+    font-family: myfont;
+    font-size: 13px;
 }
 .mobiles{
-    padding: 5px 0px;
+    padding: 5px 15px;
     color: rgb(33,33,33);
     white-space: nowrap; 
 }
@@ -704,15 +764,20 @@ section.price{
     padding: 16px;
     border-bottom: 1px solid rgb(240,240,240);
 }
+.mobiles p{
+    font-size: 13px;
+    font-family: roboto-medium;
+}
 .price-flex{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.price-flex div.span{
+.price-flex div span{
     font-size: 13px;
     font-weight: 500;
     letter-spacing: 0.3px;
+    font-family: roboto-medium;
 }
 .graph{
     height:25px
@@ -720,6 +785,9 @@ section.price{
 .graph-area{
     height: 100%;
     bottom: -6px;
+    white-space: nowrap;
+    display: flex;
+    align-items: baseline;
 }
 .graph-area .area-one{
     height: 21.875px;
@@ -728,7 +796,7 @@ section.price{
     display: inline-block;
 }
 .graph-area .area-two{
-    height: 21.875px;
+    height: 25.875px;
     width: 47.362px;
     background: rgb(224, 224, 224);
     display: inline-block;
@@ -738,5 +806,27 @@ section.price{
     width: 47.362px;
     background: rgb(224, 224, 224);
     display: inline-block;
+}
+.graph-area .area-four{
+    height: 21.4286px;
+    width: 47.362px;
+    background: rgb(224, 224, 224);
+    display: inline-block;
+}
+.graph-area .area-five{
+    height: 25px;
+    width: 47.362px;
+    background: rgb(224, 224, 224);
+    display: inline-block;
+}
+.status-bar .status-bar-graph{
+    position: relative;
+    height: 13px;
+    cursor: pointer;
+}
+.status-one{
+    transform: translateX(0px);
+    left: -13.5px;
+    
 }
 }
