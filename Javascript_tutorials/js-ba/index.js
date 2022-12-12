@@ -68,4 +68,66 @@
 //     fun1();
 //     fun2();
 
-var myVar 
+// var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]]
+// var myData = myArray[2][1];
+// console.log(myData);
+
+//Manipulating an Array
+//push,pop,shift,unshift
+
+// var ourArray = ["Stimpson", "J", "cat"];
+// ourArray.push(["happy", "joy"]);
+
+// console.log(ourArray);
+
+// var myArray = [["john","23"] , ["cat",2]];
+// myArray.push()=(["dog", 3])
+// console.log(myArray)
+
+// var ourArray = [1,2,3];
+// var removedFromOurArray = ourArray.pop();
+// console.log(removedFromOurArray);
+// console.log(ourArray)
+
+// var myArray = [["john","23"] , ["cat",2]];
+// var removedFromOurArray = myArray.pop();
+// console.log(myArray)
+
+// var ourArray = ["Stimpson", "J", "cat"];
+// var removedFromOurArray = ourArray.shift();
+// console.log(removedFromOurArray);
+// var myArray = [["John",23], ["dog",3]];
+// var removedFromOurArray = myArray.shift();
+// console.log(removedFromOurArray);
+
+//  var myArray = [["john","23"] , ["cat",2]];
+//  myArray.unshift() = (["dog", 3])
+//  console.log(myArray);
+
+// var myList = [["cereal", 3],["milk",2], ["milk",2],["John"]  ]
+
+
+// Reusable code 
+// function ourReusableFunction(){
+//     console.log("Heyya", "World");
+// }
+// ourReusableFunction();
+
+// function ourFunctionWithArgs(a , b){
+//     console.log(a-b);
+// }
+
+// ourFunctionWithArgs(20,10);
+
+// function operations(num){
+//     return num-2;
+// }
+
+// console.log(operations(8))
+// console.log(operations(0))
+
+// function operations(num){
+//     return num * 2;
+// }
+
+// console.log(operations(10))
