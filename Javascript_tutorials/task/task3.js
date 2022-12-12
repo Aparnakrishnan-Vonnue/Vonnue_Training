@@ -14,5 +14,5 @@ var c = water
 var d = teaPowder
 var tea = a + b + c + d
 if (a + b + c + d === true) {
-    console.log()
+    console.log("")
 }
