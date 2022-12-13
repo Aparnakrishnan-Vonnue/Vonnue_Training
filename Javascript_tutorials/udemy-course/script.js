@@ -80,13 +80,85 @@
 //  const isFullAge = ageSarah >= 18;
 //  console.log (now - 1991 > now - 2018);
  //operator precedence
- const now = 2037;
- const ageJonas = now - 1991;
- const ageSarah = now - 2018;
+//  const now = 2037;
+//  const ageJonas = now - 1991;
+//  const ageSarah = now - 2018;
 
- console.log (now - 1991 > now - 2018);
- console.log(25 -10 - 5);
- let x,y;
- x = y = 25 - 10 -5;
- console.log(x,y);
- 
+//  console.log (now - 1991 > now - 2018);
+//  console.log(25 -10 - 5);
+//  let x,y;
+//  x = y = 25 - 10 -5;
+//  console.log(x,y);
+//  const averageAge = ageJonas + ageSarah / 2;
+//  console.log(ageJonas,ageSarah,averageAge);
+//excercise
+// const massOfMark = 78;
+// const heightOfMark = 1.69;
+// const massOfJohn = 92;
+// const heightOfJohn = 1.95;
+// console.log('BMI of Mark ='+" "+massOfMark/heightOfMark**2);
+// console.log('BMI of John ='+" "+massOfJohn/heightOfJohn**2);
+// const markBMI = massOfMark/heightOfMark**2;
+// const johnBMI = massOfJohn/heightOfJohn**2;
+// const markHigherBMI = markBMI > johnBMI;
+// console.log(markHigherBMI);
+// const firstName = 'Jonas';
+// const job = 'teacher';
+// const birthYear = 1991;
+// const year = 2037;
+// const jonas = "I'm " + firstName + ', a'+" "+ (year - birthYear) + 'years old' + job + '!';
+// console.log(jonas);
+//template-literal
+// const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
+// console.log(jonasNew);
+// console.log(`just a regular string...`);
+// //template-literal to create a multiline string
+// console.log('String with \n\
+// multiple \n\
+// lines');
+// console.log(`String 
+// multiple
+// lines`);
+//if/else statements
+// const age = 12;
+// const isOldEnough = age >= 18;
+// if(isOldEnough){
+//   console.log('Serah can start her driving license 🚗');
+// }
+// if(age>=18){
+//   console.log('Serah can start her driving license 🚗');
+// }else {
+//  const yearsLeft = 18 - age;
+//  console.log(`Serah is too young. Wait another ${yearsLeft} years :`);
+//  }
+
+//  const birthYear = 1991;
+//  let century;
+//  if(birthYear <= 2000) {
+//    century = 20;
+//  }else {
+//    century = 21;
+//  }
+//  console.log(century);
+//coding challenge 2
+// const massOfMark = 78;
+// const heightOfMark = 1.69;
+// const massOfJohn = 92;
+// const heightOfJohn = 1.95;
+// console.log('BMI of Mark ='+" "+massOfMark/heightOfMark**2);
+// console.log('BMI of John ='+" "+massOfJohn/heightOfJohn**2);
+// const markBMI = massOfMark/heightOfMark**2;
+// const johnBMI = massOfJohn/heightOfJohn**2;
+// const markHigherBMI = markBMI > johnBMI;
+// console.log(markHigherBMI);
+// if(markHigherBMI) {
+//   console.log(`Mark's BMI ${markBMI} is higher than john's BMI ${johnBMI}`)
+// } else {
+//   console.log(`John's BMI ${johnBMI} is higher than Mark's BMI ${markBMI}`)
+// };
+//Type conversion and coercion
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);
+// console.log(inputYear + 18);
+console.log(Number(inputYear) + 18);
+
