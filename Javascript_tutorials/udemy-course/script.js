@@ -704,26 +704,99 @@
 //   if(dice === 6) console.log('Loop is about to end...');
 //  }
 //CODING CHALLENGE
-const calcTip = function(bill) {
-  return bill >= 50 && bill <= 300? bill * 0.15 : bill * 0.20;
-}
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-const tips = [];
-const totals = [];
-for (let i = 0; i < bills.length; i++) {
-  const tip = calcTip(bills[i]);
-  tips.push(tip);
-  totals.push(tip + bills[i]);
-}
-console.log(bills, tips, totals);
-const calcAverage = function(arr) {
-  let sum = 0;
-  for (let i=0; i<arr.length; i++) {
-    sum += arr[i];
+// const calcTip = function(bill) {
+//   return bill >= 50 && bill <= 300? bill * 0.15 : bill * 0.20;
+// }
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const tips = [];
+// const totals = [];
+// for (let i = 0; i < bills.length; i++) {
+//   const tip = calcTip(bills[i]);
+//   tips.push(tip);
+//   totals.push(tip + bills[i]);
+// }
+// console.log(bills, tips, totals);
+// const calcAverage = function(arr) {
+//   let sum = 0;
+//   for (let i=0; i<arr.length; i++) {
+//     sum += arr[i];
+//   }
+//   // console.log(sum);
+//   return sum / arr.length;
+// }
+// console.log(calcAverage([2,3,7]));
+// console.log(calcAverage(totals));
+// console.log(calcAverage(tips));
+// PROBLEM:
+//We work for a company building a smarthome themometer. Our most recent task is this; "Given an array of temperatures of one day, calculate the temperature amplitude. Keep in mind that sometimes there might be a sensor error."
+
+
+//1)Understanding the problem
+//?-What is a temperature amplitude?
+//Ans: It is the difference between the highest and lowest temperature.
+//?-How to compare max and min temperatures?
+//?-What's a sensor error? And what to do?
+
+//2)Breaking up into sub problems.
+// - How to ignore errors/
+// - Find the max value in temp array.
+// - Find min value in temp array.
+// - Subtract min from max(amplitude) and return it.
+// const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+// const calcTempAmplitude = function(t1,t2) {
+//   // const array1 = ['a', 'b', 'c'];
+//   // const array2 = ['d', 'e', 'f'];
+//   // const array3 = array1.concat(array2);
+//   const temps = t1.contact(t2);
+//   let max = temps[0];
+//   let min = temps[0];
+//   for (let i = 0; i < temps.length; i++) {
+//     // if (temps[i] > max) max = temps[i];
+//     if(typeof curTemp !==  'number') continue;
+//     if (curTemp > max) max = curTemp;
+//     if (curTemp < min) min = curTemp;
+//   }
+//   console.log(max, min);
+//   return max - min ;
+// };
+// const amplitudeNew = calcTempAmplitude ([3,5,1], [9,0,5]);
+// console.log (amplitudeNew);
+// const measureKelvin = function(){
+//   const measurement = {
+//     type: 'temp',
+//     unit: 'celsius',
+//     //FIX
+//     value:Number( prompt('Degree Celsius: '))
+//   }
+//   console.log(measurement);
+//   // console.log(measurement.value);
+//   // console.warn(measurement.value);
+//   // console.error(measurement.value);
+//   const kelvin = measurement.value + 273;
+//   return kelvin;
+// };
+// //A) To identify the bug
+// console.log(measureKelvin());
+//CODING CHALLENGE
+//1)Understanding the problems
+// - Array transformed to string, seperated by ...
+// - What is the X days? Ans: index + 1;
+
+//2)-Breaking up into sub-problems
+// - Transform array to string
+// - Transform each element to string with °C
+// - Strings needs to contain day (index + 1)
+// - Add ... between elements and start and end of string
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+console.log (`...${data1[0]}°C ... ${data1[1]}°C ... ${data1[2]}...`);
+const printForecast = function(arr) {
+  let str = '';
+  for (i=0; i<arr.length; i++){
+   str +=`${arr[i]}°C in ${I+1}DAYS`
   }
-  // console.log(sum);
-  return sum / arr.length;
+  console.log(str);
 }
-console.log(calcAverage([2,3,7]));
-console.log(calcAverage(totals));
-console.log(calcAverage(tips));
+printForecast(data1)
+// 2+3 = 5+4=9;be
+//{2,3,4}
