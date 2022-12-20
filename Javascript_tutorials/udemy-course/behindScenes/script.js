@@ -347,8 +347,8 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.startMenu[starterIndex], this.mainMenu[mainIndex]];
   },
-  orderDelivery: function(obj){
-    console.log(obj);
+  orderDelivery: function({starterIndex = 1, mainIndex = 0, time = '20:00', address}){
+    console.log(`Order received! ${this. startMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
   },
 };
 restaurant.orderDelivery({
@@ -357,6 +357,10 @@ restaurant.orderDelivery({
   mainIndex:2,
   starterIndex: 2,
 });
+restaurant.orderDelivery({
+  address: 'Via del Sole, 21',
+  starterIndex: 1,
+})
 
 const {name, openingHours, categories} = restaurant;
 console.log(name , openingHours, categories);
@@ -368,12 +372,12 @@ const {menu = [], startMenu: starters = []} = restaurant;
 console.log(menu, starters);
 
 //Mutating variables
-let a = 111;
-let b = 999;
-const obj = {a:23, b:7, c:14};
-// let {a,b} = obj;//reference error since variable is immutable.It can be solved as
-({a,b} = obj);
-console.log(a,b);
+// let a = 111;
+// let b = 999;
+// const obj = {a:23, b:7, c:14};
+// // let {a,b} = obj;//reference error since variable is immutable.It can be solved as
+// ({a,b} = obj);
+// console.log(a,b);
 
 //Nested objects
 const {
@@ -381,3 +385,73 @@ const {
 } = openingHours;
 console.log(o, c);
 
+// const arr = [7,8,9];
+// const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+// console.log(badNewArr);
+
+// const newArr = [1,2,...arr];
+// console.log(newArr);
+
+// console.log(...newArr);
+// console.log(1,2,7,8,9);
+
+// //another example
+// const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+// console.log(newMenu);
+
+// //Copy Array
+// const mainMenuCopy= [...restaurant.mainMenu];
+// console.log(mainMenuCopy);
+// //Join 2 arrays
+// const menuNew =[...restaurant.startMenu, ...restaurant.mainMenu];
+// console.log(menuNew);
+
+// //iterables: arrays, strings, maps, sets. NOT objects
+// const str = 'Jonas';
+// const letters = [...str, '', '$.'];
+// console.log(letters);
+// console.log(...str);
+// console.log('j', 'o');
+//console.log(`${...str} Schmedtmann`);
+
+//1)DESTRUCTURING
+//SPREAD, because on RIGHT side of =
+// const arr = [1,2, ...[3,4]];
+
+// //REST, because on LEFT side of ==
+// const [a,b, ...others] = [1, 2, 3, 4, 5];
+// console.log(a, b, others);
+// const [pizza, Risotto,...otherFood]  = [...restaurant.mainMenu, ...restaurant.startMenu]
+// console.log (pizza, Risotto,otherFood);
+
+// //Objects
+// const {sat, ...weekdays} = restaurant.openingHours;
+// console.log(weekdays);
+
+// //2)FUNCTIONS
+// const add = function(...numbers){
+//   let sum = 0;
+//   for(let i=0; i<numbers.length; i++) sum += numbers[i];
+//   console.log(sum);
+// }
+//   add(2,3);
+//   add(5,3,7,2);
+//   add(8,2,5,3,2,1,4);
+
+//   const x = [23, 5, 7];
+//   add(...x);
+//LOGICAL OPERATORS can >>Use any datatype >>return any datatype>>Shortcircuiting.
+console.log(3||'Jonas');
+console.log(0 || 'Jonas')
+console.log(true || 0);
+console.log(undefined || null);
+console.log (undefined || 0 || '' || 'Hello' || 23);
+
+// restaurant.numGuests = 23;
+const guests1 = restaurant.numGuests ? restaurant.numGuests:10;
+console.log(guests1);
+const guests2 =( restaurant.numGuests ) || 10;
+console.log(guests2);
+console.log('---AND---');
+console.log(0 && 'Jonas');
+console.log(7 && 'Jonas');
