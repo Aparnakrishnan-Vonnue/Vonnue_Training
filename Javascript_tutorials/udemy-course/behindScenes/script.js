@@ -160,30 +160,224 @@
 //   }
 // };
 // jonas.calcAge();
-console.log(this);
-const calcAge = function (birthYear) {
-  console.log(2037 - birthYear);
-  // console.log(this);
-};
-calcAge(1991);
+// console.log(this);
+// const calcAge = function (birthYear) {
+//   console.log(2037 - birthYear);
+//   // console.log(this);
+// };
+// calcAge(1991);
 
-const calcAgeArrow = birthYear => {
-  console.log(2037 - birthYear);
-  // console.log(this);
-};
-calcAgeArrow(1980);
+// const calcAgeArrow = birthYear => {
+//   console.log(2037 - birthYear);
+//   // console.log(this);
+// };
+// calcAgeArrow(1980);
 
-const jonas = {
-  year : 1991,
-  calcAge: function() {
-    console.log(this);
-    console.log(2037 - this.year)
+// const jonas = {
+//   year : 1991,
+//   calcAge: function() {
+//     console.log(this);
+//     console.log(2037 - this.year)
+//   },
+// }
+// jonas.calcAge();
+
+// const matilda = {
+//   year:2017
+// };
+// matilda.calcAge = jonas.calcAge;
+// matilda.calcAge(); 
+
+
+// const f = jonas.calcAge;
+// f();
+// //    var firstName = 'Matilda';
+//    const jonas = {
+//    firstName: 'Jonas',
+//     year : 1991,
+//   calcAge: function() {
+//     // console.log(this);
+//     console.log(2037 - this.year);
+//Solution 1
+    // const self = this;//self or that
+    
+    // const isMillenial = function(){
+    //   console.log(self);
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    // };
+    // isMillenial();
+   
+    
+//     const isMillenial = function(){
+//       console.log(self);
+//       console.log(self.year >= 1981 && self.year <= 1996);
+//     };
+//     isMillenial();
+//   },
+//   greet: () => {
+//   console.log(this);
+//   console.log(`Hey ${this.firstName}`);
+// },
+// };
+// jonas.greet();
+// jonas.calcAge();
+
+// //arguments keywords
+// const addExpr = function(a,b) {
+//   console.log(arguments);
+//   return a+b;
+// };
+// addExpr(2,5);
+// addExpr(2,5,8,12);
+// var addArrow = (a,b) =>{
+// console.log(arguments);
+// return a+b;
+// } ;
+// addArrow(2,5,8);/
+
+// let age = 30;
+// let oldAge = age;
+// age = 31;
+// console.log(age);
+// console.log(oldAge);
+
+// const me = {
+//   name: 'Jonas',
+//   age :30
+// }
+// const friend = me;
+// friend.age =27;
+// console.log('Friend:', friend);
+// console.log('Me',me);
+
+// let lastName = 'Williams';
+// let oldLastName = lastName;
+// lastName = 'Davis';
+// console.log(lastName,oldLastName);
+
+// const jessica = {
+//   firstName:'Jessica',
+//   lastName: 'Williams',
+//   age:27,
+// };
+// const marriedJessica = jessica;
+// marriedJessica.lastName = 'Davis';
+// console.log('Before marriage:',jessica);
+// console.log('After marriage:', marriedJessica);
+// //marriedJessica();
+
+// //Copying objects
+// const jessica2 = {
+//   firstName :'jessica',
+//   lastName : 'Williams',
+//   age:27,
+//   family : ['Alice', ]
+// }
+// const jessicaCopy = Object.assign({}, jessica2);
+// jessicaCopy.lastName ='Davis';
+
+// jessicaCopy.family.push('Mary');
+// jessicaCopy.family.push('John');
+
+// console.log('Before marriage:',jessica2);
+// console.log('After marriage:', jessicaCopy);
+
+// ARRAY DESTRUCTURING
+// const restaurant = {
+//   name: 'Classico Italiano',
+//   location:'Via Angelo Tavanti 23, Firenze, Italy',
+//   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+//   StarterMenu : ['Focaccia', 'Bruschatte, Garlic bread, Caprese Salad'],
+//   mainMenu: ['Pizza', 'Pasts0', 'Risotto'],
+
+//   order: function(starterIndex, mainIndex) {
+//     return[this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+//   }
+// };
+// const arr = [2,3,4];
+// const a = arr[0];
+// const b = arr[1];
+// const c = arr[2];
+// const [x,y,z] = arr;
+// console.log(x,y,z);
+// console.log(arr);
+// let [main,secondary] = restaurant.categories;
+// console.log(main,secondary);
+// //Switching Variables
+// // const temp = main;
+// // main = secondary;
+// // secondary = temp;
+// // console.log(main,secondary);
+
+// [main,secondary] = [secondary,main];
+// console.log(main,secondary);
+// const[starter, main] = restaurant.order(2, 0);
+// console.log(starter, mainCourse);
+// const nested = [2, 4, [5, 6]];
+// // const [i ,j] = nested;
+// // console.log(i,j);
+// const [i,[j,k]] = nested;
+// console.log(i,j,k);
+
+//Default values
+const [p=1, q=1, r=1] = [8,9];
+console.log(p, q, r);
+const restaurant = {
+  name : 'Classico Italiano',
+  location : 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories : ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  startMenu : ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese salad'],
+  mainMenu : ['Pizza', 'Pasta', 'Risotto'],
+  
+  openingHours : {
+    thu: {
+      open: 12,
+      close: 22
   },
-}
-jonas.calcAge();
+  fri: {
+    open:11,
+    close: 23,
+  },
+  sat: {
+    open:0, //24hrs open
+    close: 24,
+  },
+  },
 
-const matilda = {
-  year:2017
+  order: function (starterIndex, mainIndex) {
+    return [this.startMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+  orderDelivery: function(obj){
+    console.log(obj);
+  },
 };
-matilda.calcAge = jonas.calcAge;
-matilda.calcAge(); 
+restaurant.orderDelivery({
+  time: '22:30',
+  address: 'Via del Sole, 21',
+  mainIndex:2,
+  starterIndex: 2,
+});
+
+const {name, openingHours, categories} = restaurant;
+console.log(name , openingHours, categories);
+
+const {name: restaurantName,openingHours: hours, categories: tags } = restaurant;
+console.log(restaurantName, hours, tags);
+//Default values
+const {menu = [], startMenu: starters = []} = restaurant;
+console.log(menu, starters);
+
+//Mutating variables
+let a = 111;
+let b = 999;
+const obj = {a:23, b:7, c:14};
+// let {a,b} = obj;//reference error since variable is immutable.It can be solved as
+({a,b} = obj);
+console.log(a,b);
+
+//Nested objects
+const {
+  fri:{open: o, close: c},
+} = openingHours;
+console.log(o, c);
+
