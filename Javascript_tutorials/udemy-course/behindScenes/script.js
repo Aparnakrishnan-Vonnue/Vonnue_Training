@@ -1094,16 +1094,165 @@
 // var notPrivate = 46;
 // //console.log(isPrivate);
 // console.log(notPrivate);
-const secureBooking = function(){
-  let passengerCount = 0;
-  return function(){
-    passengerCount++;
-    console.log(`${passengerCount}passengers`);
-  }
+// const secureBooking = function(){
+//   let passengerCount = 0;
+//   return function(){
+//     passengerCount++;
+//     console.log(`${passengerCount}passengers`);
+//   }
   
+// }
+// const booker = secureBooking();
+// booker();
+// booker();
+// booker();
+// console.dir(booker);
+
+//CLOSURE METHODS
+//EXAMPLE 1
+// let f;
+// const g = function(){
+//   const a =23;
+//   f= function() {
+//     console.log(a*2);
+//   };
+// };
+
+// const h = function(){
+//   const b = 777;
+//   f = function(){
+//     console.log(b*2)
+//   };
+// };
+
+// g();
+// f();
+// console.dir(f);
+// //re-assigning f function
+// h();
+// f();
+// console.dir(f);
+
+// //EXAMPLE 2
+// const boardPassengers = function (n, wait) {
+//   const perGroup = n/3;
+
+//   setTimeout(function() {
+//     console.log(`We are now boarding all ${n} passengers`);
+//     console.log(`There are 3 groups, each with ${perGroup} passengers`);
+//   }, wait * 1000);
+//   console.log(`Will start boarding in ${wait} seconds`);
+// } 
+// const perGroup = 1000;
+// boardPassengers(180,3);
+// //CODING CHALLENGE
+// (function (){
+//   const header = document.querySelector('h1');
+//   header.style.color = 'red';
+
+//   document.querySelector('body').addEventListener('click', function(){
+//     header.style.color = 'blue';
+//   });
+// })();
+
+//SIMPLE ARRAY METHODS
+//DATA
+// const account1 = {
+//   Owner: 'Jonas Schmedtmann',
+//   movements : [200, 450,-400, 3000, -650, -130, 70, 1300 ],
+//   interestRate : 1.2,//%
+//   pin:1111,
+// };
+// const account2 = {
+//   owner: 'Jessica Davis',
+//   movements: [5000,3400,-150,-790,-3210,-1000,8500,-30],
+//   interestRate:1.5,
+//   pin:2222,
+// };
+// const account3 = {
+//   Owner: 'Steven Thomas Williams',
+//   movements: [200, -200, 340, -300, -20, 50, 400, -460],
+//   interestRate:0.7,
+//   pin:3333,
+// }
+//slice method
+// let arr = ['a', 'b', 'c', 'd', 'e'];
+// console.log(arr.slice(2));
+// console.log(arr.slice(2,4));
+// console.log(arr.slice(-2));
+// console.log(arr.slice(-1));
+// console.log(arr.slice(1,-2));
+// console.log(arr.slice());
+// console.log([...arr]);
+
+// //splice method
+// // console.log(arr.splice(2));
+// arr.splice(-1)
+// console.log(arr);
+// console.log(arr.splice(3));
+// arr.splice(1,2);
+// console.log(arr);
+
+// //Reverse
+// arr = ['a','b', 'c', 'd','e'];
+// const arr2 =['j', 'i', 'h', 'g', 'j'];
+// console.log(arr2.reverse());
+
+// //concat method
+// const letters = arr.concat(arr2);
+// console.log(letters);
+// console.log([...arr, ...arr2]);
+
+// //Join Method
+// console.log(letters.join('-'));
+
+
+//THE NEW AT METHOD
+// const arr= [23, 11, 64];
+// console.log(arr[0]);
+// console.log(arr.at(0));
+
+// //getting last element
+// console.log(arr[arr.length - 1]);
+// console.log(arr.slice(-1)[0]);
+// console.log(arr.at(-1));
+
+//LOOPING ARRAYS_FOREACH METHOD
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+for (const movement of movements){
+  if(movement > 0) {
+    console.log(`You deposited ${movement}`);
+  }else {
+    console.log(`You withdrew ${Math.abs(movement)}`);
+  }
 }
-const booker = secureBooking();
-booker();
-booker();
-booker();
-console.dir(booker);
+console.log('----FOREACH----');
+// movements.forEach(function(movement){
+//   if(movement > 0) {
+//     console.log(`You deposited ${movement}`);
+//   }else{
+//     console.log(`You withdrew ${Math.abs(movement)}`);
+//   }
+// }) 
+// movements.forEach(function(mov, i, arr){
+//   if(mov > 0) {
+//     console.log(`Movement ${i+1}:You deposited ${mov}`);
+//   }else{
+//     console.log(`Movement ${i+1}:You withdrew ${Math.abs(mov)}`);
+//   }
+// }) 
+//MAP
+const currencies = new Map([
+  ['USD','United States dollar',],
+  ['EUR', 'EURO'],
+  ['GBP', 'Pound Sterling'],
+]);
+currencies.forEach(function(value,key,map) {
+  console.log(`${key}:${value}`);
+});
+//set
+const currenciesUnique = new Set(['USD','GBP','USD','EUR','EUR']);
+console.log(currenciesUnique);
+currenciesUnique.forEach(function (value, _, map){
+  console.log(`${value}:${value}`);
+})
