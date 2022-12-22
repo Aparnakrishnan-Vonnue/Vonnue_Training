@@ -739,44 +739,371 @@
 // checkMiddleSeat('11B');
 // checkMiddleSeat('23C');
 // checkMiddleSeat('3E');
-const airline = 'TAP Air portugal';
-console.log(airline.toUpperCase());
-console.log(airline.toUpperCase());
-//FIX CAPITALIZATION IN NAME
-const passenger = 'jOnAS'; //Jonas
-const passengerLower = passenger.toLowerCase();
-const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
-console.log(passengerCorrect);
+// const airline = 'TAP Air portugal';
+// console.log(airline.toUpperCase());
+// console.log(airline.toUpperCase());
+// //FIX CAPITALIZATION IN NAME
+// const passenger = 'jOnAS'; //Jonas
+// const passengerLower = passenger.toLowerCase();
+// const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+// console.log(passengerCorrect);
 
 //Comparing emails
 
-const email = 'hello@jonas.io';
-const loginEmail = 'Hellooo@Jonas.Io \n';
+// const email = 'hello@jonas.io';
+// const loginEmail = 'Hellooo@Jonas.Io \n';
 
-const lowerEmail = loginEmail.toLowerCase();
-const trimmedEmail = lowerEmail.trim();
-console.log(trimmedEmail);
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim();
+// console.log(trimmedEmail);
 
-const normalizedEmail = loginEmail.toLowerCase().trim();
-console.log(normalizedEmail);
-console.log(email === normalizedEmail);
+// const normalizedEmail = loginEmail.toLowerCase().trim();
+// console.log(normalizedEmail);
+// console.log(email === normalizedEmail);
 
 //replacing
-const priceGB = '288,97$';
-const priceUS = priceGB.replace ('$', '$').replace(',', '.');
-console.log(priceUS);
-const announcement = 'All passengers come to boarding door 23, Boarding door 23!';
+// const priceGB = '288,97$';
+// const priceUS = priceGB.replace ('$', '$').replace(',', '.');
+// console.log(priceUS);
+// const announcement = 'All passengers come to boarding door 23, Boarding door 23!';
 
-console.log(announcement.replace('door','gate'));
-//console.log(announcement.replaceAll('door','gate'))
-console.log(announcement.replace(/door/g, 'gate'));
+// console.log(announcement.replace('door','gate'));
+// //console.log(announcement.replaceAll('door','gate'))
+// console.log(announcement.replace(/door/g, 'gate'));
 
 //Booleans
-const plane = 'Airbus A320ne0';
-console.log(plane.includes('A320'));
-console.log(plane.includes('Boeing'));
-console.log(plane.includes('Air'));
+// const plane = 'Airbus A320ne0';
+// console.log(plane.includes('A320'));
+// console.log(plane.includes('Boeing'));
+// console.log(plane.includes('Air'));
 
-if (plane.startsWith ('Airbus') && plane.endsWith('neo')) {
-  console.log('Part of the New Airbus family');
+// if (plane.startsWith ('Airbus') && plane.endsWith('neo')) {
+//   console.log('Part of the New Airbus family');
+// }
+//Practise exercise
+// const checkBaggage = function (items) {
+//   const baggage = items.toLowerCase();
+//   if(baggage.includes('knife') || baggage.includes('gun')){
+//     console.log('You are NOT allowed on board');
+//   }else {
+//     console.log('Welcome abroad!')
+//   }
+// };
+// checkBaggage('I have a laptop, some Food and a pocket Knife');
+// checkBaggage('Socks and Camera');
+// checkBaggage('Got some snacks and a gun for protection');
+
+//split(string method)
+// console.log('a+very+nice+string'.split('+'));
+// console.log('Jonas Schmedtmann'.split(''));
+
+// const [firstName, lastName] = 'Jonas Schmedtmann' . split(' ');
+// const newName = ['Mr.', firstName, lastName.toUpperCase()] . join(' ');
+// console.log(newName);
+
+// const capitalizeName = function(name) {
+//   const  names = name.split(' ');
+//   const namesUpper = [];
+
+//   for (const n of names) {
+//     // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+//     namesUpper.push(n.replace(n[0], n[0] .toUpperCase()));
+//   }
+//   console.log(namesUpper.join(' '));
+// }
+// capitalizeName('jessica ann smith davis');
+// capitalizeName('jonas schmedtmann');
+
+// //Padding a string
+// const message = 'Go to gate 23!';
+// console.log(message.padStart(25, '+').padEnd(35, '+'));
+// console.log('Jonas'.padStart(25, '+')); 
+
+// //example
+// const maskCreditCard = function(number) {
+//   const str = number + '';
+//   const last = str.slice(-4);
+//   return last.padStart(str.length, '*');
+// }
+// console.log(maskCreditCard(987658335474));
+
+// //Repeat method
+// const message2 = 'Bad weather...All departures delayed...';
+// console.log(message2.repeat(5));
+
+// const planesInLine = function(n) {
+//   console.log(`There are ${n} planes in line ${'✈️'.repeat(n)}`);
+// }
+//   planesInLine(5);
+//   planesInLine(3);
+//   planesInLine(12);
+
+//   //CODING CHALLENGE
+//   document.body.append(document.createElement('textarea'));
+//   document.body.append(document.createElement('button'));
+//   document.querySelector('button').addEventListener('click', function(){
+//     const text = document.querySelector('textarea').value;
+//     const rows = text.split('\n')
+//     console.log(rows);
+
+//     for (const row of rows) {
+//       const[first, second] = row.toLowerCase().trim().split('_');
+//       console.log(row, first, second);
+
+//       const output =  `${first} ${second.replace(
+//         second[0],
+//         second[0].toUpperCase();
+//       )}`;
+//       console.log(output);
+//     }
+
+//   })
+  // const flights = 
+  // '_Delayed_Departure;fao78455187;txl451254612511:25 +_Arrival;bru4174686546;fao785444444;11.45+_Delayed_Arrival;hel7521225452002;fao78965252;12:05+_Departure;fao74521741;lis1253365522669;12:30';
+
+  
+  // for(const flight of flights.split('+')){
+  //   const [type, from, to, time] = flight.split(';');
+  //   const output = `${type.replaceAll('_',' ')} ${from} ${to} (${time.replace(':', 'h')})`;
+  //   console.log(output);
+  // }
+// const bookings = [];
+// const createBooking = function(
+//   flightNum,
+//   numPassengers = 1,
+//   price = 199 * numPassengers
+// ){
+//   //ES5
+//   //numPassengers = numPassenger || 1;
+//   //price = price || 199;
+
+// const booking = {
+//   flightNum,
+//   numPassengers,
+//   price,
+// };
+// console.log(booking);
+// bookings.push(booking);
+// };
+
+// createBooking('LH123');
+// createBooking('LH123',2,800);
+// createBooking('LH123',2);
+// createBooking('LH123',5);
+
+// createBooking('LH123', undefined, 1000);
+
+// const checkIn = function (flightNum, passenger) {
+//   flightNum = 'LH999';
+//   passenger.name = 'Mr.' + passenger.name;
+
+//   if(passenger.passport === 2574861664) {
+//     alert('Checked in');
+//   }else {
+//     alert('Wrong passport');
+//   }
+// };
+
+// checkIn(flight, jonas);
+// console.log(flight);
+// console.log(jonas);
+
+//Is the same as doing...
+// const flightName = flight;
+// const passenger = jonas;
+
+// const newPassport = function(person) {
+//   person.passport = Math.trunc(Math.random()*100000000);
+// };
+
+// newPassport(jonas);
+// checkIn(flight,jonas);
+// const oneWord = function(str) {
+//   return str.replace(/ /g, '').toLowerCase();
+// }
+
+// const  upperFirstWord = function(str) {
+//   const [first, ...others] = str.split(' ');
+//   return [first.toUpperCase(), ...others].join(' ');
+// };
+
+//Higher Order function
+// const transformer = function (str, fn) {
+//   console.log(`Original string: ${str}`);
+//   console.log(`Transformed string: ${fn(str)}`);
+//   console.log(`Transformed by: ${fn.name}`);
+// };
+// transformer('JavaScript is the best!', upperFirstWord);
+// transformer('JavaScript is the best!', oneWord);
+
+//JS uses callbacks all the time
+// const high5 = function(){
+//   console.log('👋');
+// };
+// document.body.addEventListener('click', high5);
+// ['Jonas', 'Martha', 'Adam'].forEach(high5);
+
+//Functions returning functions
+// const greet = function(greeting) {
+//   return function(name) {
+//     console.log(`${greeting} ${name}`)
+//   };
+// };
+// const greeterHey = greet('Hey');
+// greeterHey('Jonas');
+// greeterHey('Steven');
+// greet('Hello')('Jonas');
+
+// //Challenge : write the above code using arrow function
+// const greetArr = greeting => name => console.log(`${greeting} ${name}`);
+//  greetArr('Hi')('Jonas');
+
+//  const lufthansa = {
+//   airline: 'Lufthansa',
+//   iataCode: 'LH',
+//   bookings: [],
+//   //book: function(){}
+//   book(flightNum, name) {
+//     console.log(
+//     `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+//     );
+//     this.bookings.push({flight: `${this.iataCode}${flightNum}`,name})
+//   },
+//  };
+//  lufthansa.book(239, 'Jonas Schmedtmann');
+//  lufthansa.book(635, 'John Smith');
+//  console.log(lufthansa);
+
+// //  const eurowings = {
+//   airline: 'Eurowings',
+//   iataCode : 'EW',
+//   bookings:[],
+//  };
+//  const book = lufthansa.book;
+// //  book(23, ' Sarah Williams'); Does not work
+
+//  //call method
+//  book.call(eurowings,23, 'Sarah Williams');
+//  console.log(eurowings);
+
+//  book.call(lufthansa,239,'Mary Cooper');
+//  console.log(lufthansa);
+
+//  const swiss = {
+//   airline: 'Swiss Air Lines',
+//   iataCode: 'LX',
+//   bookings: [],
+//  };
+//  book.call(swiss, 583, 'Mary Cooper');
+//  console.log(swiss);
+
+//   //apply method
+//   const flightData =[583, 'George Cooper'];
+//   book.apply(swiss, flightData);
+//   console.log(swiss);
+
+//   book.call(swiss, ...flightData)
+
+//   //Bind Method
+//   const bookEW = book.bind(eurowings);
+//   const bookLH = book.bind(lufthansa);
+//   const bookLX = book.bind (swiss);
+
+//   bookEW(23, 'Steven Williams');
+
+//   const  bookEW23 = book.bind(eurowings, 23);
+//   bookEW23('Jonas Schmedtmann');
+//   bookEW23('Martha Cooper');
+
+//   //With Event Listener
+//   // lufthansa.planes =300;
+//   // lufthansa.buyPlane = function() {
+//   //   console.log(this);
+
+//   //   this.planes++;
+//   //   console.log(this.planes);
+//   // };
+//   // lufthansa.buyPlane();
+//   //  document.querySelector('.buy').addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
+
+//    //Partial application
+//    const addTax = (rate, value) => value + value * rate;
+//    console.log(addTax(0.1,200));
+
+//    const addVAT = addTax.bind(null, 0.23);
+//    //addVAT = value => value + value * 0.23;
+
+//   console.log(addVAT(100));
+//   console.log(addVAT(23));
+//   //challenge: rewrite the above examples using function returning function.
+//   const addTaxRate = function(rate) {
+//     return function(value) {
+//       return value + value * rate;
+//     };
+//   };
+//   const addVAT2 = addTaxRate(0.23);
+//   console.log(addVAT2(100));
+//   console.log(addVAT2(23));
+// //CODING CHALLENGE
+// const poll = {
+//   question: 'What is your favourite programming language?',
+//   options: ['0:Javascript', '1:Python', '2.Rust', '3.C++'],
+//   //This generates [0,0,0,0]. More in the next section
+//   answers:new Array(4).fill(0),
+//   registerNewAnswer(){
+//     //Get answer
+//     const answer = Number(
+//       prompt(
+//         `${this.question} \n ${this.options.join('\n')}\n(Write option number)`
+//       )
+//     );
+//     console.log(answer);
+//     //Register answer
+//     typeof answer === 'number' && answer < this.answer < this.answers.length && this.answers[answer]++;
+
+//     console.log(this.answers);
+//   },
+//   displayResults(type = 'array') {
+//     if(type==='array'){
+//       console.log(this.answers);
+//     }else if (type === 'string') {
+//       //Poll results aare 13, 2 , 4 ,1
+//       console.log(`Poll results are ${this.answers.join('.')}`);
+//     }
+//   },
+// };
+//poll.registerNewAnswer();
+// document.querySelector('.poll').addEventListener('click', poll.registerNewAnswer).bind(poll);
+// poll.displayResults.call({answers: [5,2,3]}, 'string');
+// poll.displayResults.call({answers: [1,5,3,9,6,1]}, 'string');
+// poll.displayResults.call({answers: [1,5,3,9,6,1]}),'string}'
+
+// const runOnce = function() {
+//   console.log('This will never run again');
+// }
+// runOnce();
+
+// //  IIFE
+// (function (){
+//   console.log('This will never run again');
+//   const isPrivate = 23;
+// })
+// console.log(isPrivate);
+// (() => console.log('This will ALSO never run again'))();
+// const isPrivate = 23;
+// var notPrivate = 46;
+// //console.log(isPrivate);
+// console.log(notPrivate);
+const secureBooking = function(){
+  let passengerCount = 0;
+  return function(){
+    passengerCount++;
+    console.log(`${passengerCount}passengers`);
+  }
+  
 }
+const booker = secureBooking();
+booker();
+booker();
+booker();
+console.dir(booker);
