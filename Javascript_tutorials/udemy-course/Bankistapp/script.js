@@ -144,7 +144,7 @@
 //     // Update UI
 //     updateUI(currentAccount);
 //   }
-// });
+// })
 
 // btnTransfer.addEventListener('click', function (e) {
 //   e.preventDefault();
