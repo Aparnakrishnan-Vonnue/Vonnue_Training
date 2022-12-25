@@ -1277,8 +1277,8 @@
 // };
 // checkDogs([3,5,2,12,7], [4,1,15,8,3]);
 // checkDogs([9,16,6,8,3], [10,5,6,1,4]);
-  const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
- const eurToUSD = 1.1;
+//   const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+//  const eurToUSD = 1.1;
 // const movementsUSD = movements.map(function(mov) {
 //   return mov * eurToUSD;
 //   // return 23;
@@ -1465,106 +1465,106 @@
 
 // });
 
-const bankDepositSum = accounts
-.flatMap(acc => acc.movements)
-.filter(mov => mov>0)
-.reduce((sum,cur) => sum + cur, 0);
+// const bankDepositSum = accounts
+// .flatMap(acc => acc.movements)
+// .filter(mov => mov>0)
+// .reduce((sum,cur) => sum + cur, 0);
 
-console.log(bankDepositSum);
+// console.log(bankDepositSum);
 
-//2.
-//const numberDeposits1000 = accounts
-// .flatMap(acc.movements)
-//.filter(mov => mov >= 1000).length;
+// //2.
+// //const numberDeposits1000 = accounts
+// // .flatMap(acc.movements)
+// //.filter(mov => mov >= 1000).length;
 
-const numDeposits1000 = accounts
-  .flatMap(acc => acc.movements)
-  // .reduce((count,cur) =>(cur >= 1000 ? count + 1 : count), 0);
-  .reduce((count,cur) =>(cur >= 1000 ? count ++: count), 0);
+// const numDeposits1000 = accounts
+//   .flatMap(acc => acc.movements)
+//   // .reduce((count,cur) =>(cur >= 1000 ? count + 1 : count), 0);
+//   .reduce((count,cur) =>(cur >= 1000 ? count ++: count), 0);
 
-  console.log(numDeposits1000); 
+//   console.log(numDeposits1000); 
 
-  //prefix ++ operator
-  let a = 10;
-  console.log(++a);
-  console.log(a);
+//   //prefix ++ operator
+//   let a = 10;
+//   console.log(++a);
+//   console.log(a);
 
-  //3.
-  const {deposits,withdrawals} = accounts
-    .flatMap(acc => acc.movements)
-    .reduce(
-      (sums,cur) => {
-        //cur > 0? (sums, deposits += cur) ; (sums.withdrawals += cur);
-        sums[cur > 0 ? 'deposits' : 'withdrawals'] += cur;
-        return sums;
-      },
-      {deposits: 0, withdrawals : 0}
-    );
+//   //3.
+//   const {deposits,withdrawals} = accounts
+//     .flatMap(acc => acc.movements)
+//     .reduce(
+//       (sums,cur) => {
+//         //cur > 0? (sums, deposits += cur) ; (sums.withdrawals += cur);
+//         sums[cur > 0 ? 'deposits' : 'withdrawals'] += cur;
+//         return sums;
+//       },
+//       {deposits: 0, withdrawals : 0}
+//     );
 
-    console.log(deposits, withdrawals);
+//     console.log(deposits, withdrawals);
 
-    //4.
-    //this is a nice title -> This Is a Nice Title
-    const convertTitleCase = function (title){
-      const expectations = ['a','an', 'the', 'but', 'or','on', 'in', 'with' ];
-      const titleCase = title 
-        .toLowerCase()
-        .split('')
-        // .map(word => word[0].toUpperCase() + word.slice(1));
-        .map(word => 
-          expectations.includes(word) ? word : word[0], toUpperCase() + word.slice(1))
-        }
-        join('');
-        return capitalize();
+//     //4.
+//     //this is a nice title -> This Is a Nice Title
+//     const convertTitleCase = function (title){
+//       const expectations = ['a','an', 'the', 'but', 'or','on', 'in', 'with' ];
+//       const titleCase = title 
+//         .toLowerCase()
+//         .split('')
+//         // .map(word => word[0].toUpperCase() + word.slice(1));
+//         .map(word => 
+//           expectations.includes(word) ? word : word[0], toUpperCase() + word.slice(1))
+//         }
+//         join('');
+//         return capitalize();
 
-    console.log(convertTitleCase('thid is a nice title'));
-    console.log(convertTitleCase('this is a LONG title but not too long'));
-    console.log(convertTitleCase('and here is another title with an EXAMPLE'));
+//     console.log(convertTitleCase('thid is a nice title'));
+//     console.log(convertTitleCase('this is a LONG title but not too long'));
+//     console.log(convertTitleCase('and here is another title with an EXAMPLE'));
 
-    //CODING CHALLENGE
-    const dogs = [
-      {weight: 22, curFood:250,owners:['Alice','Bob']},
-      {
-        weight: 8, curFood:200, owners: ['Matilda']
-      },
-      {weight:13, curFood:275, owners: ['Sarah','John']},
-      {weight:32, curFood:340, owners: ['Michael']},
-    ]
-//1.
-dogs.forEach(dog =>(dog.recFood = Math.trunc(dog.weight ** 0.75 * 28)) );
+//     //CODING CHALLENGE
+//     const dogs = [
+//       {weight: 22, curFood:250,owners:['Alice','Bob']},
+//       {
+//         weight: 8, curFood:200, owners: ['Matilda']
+//       },
+//       {weight:13, curFood:275, owners: ['Sarah','John']},
+//       {weight:32, curFood:340, owners: ['Michael']},
+//     ]
+// //1.
+// dogs.forEach(dog =>(dog.recFood = Math.trunc(dog.weight ** 0.75 * 28)) );
 
-//2.
-const dogSarah = dogs.find(dog => dog.owners.includes('Sarah'));
-console.log(dogSarah);
-console.log(
-  `Sarah's dog is eating too ${
-    dogSarah.curFood > dogSarah.recFood ? 'much' : 'little'
-  }`
-);
+// //2.
+// const dogSarah = dogs.find(dog => dog.owners.includes('Sarah'));
+// console.log(dogSarah);
+// console.log(
+//   `Sarah's dog is eating too ${
+//     dogSarah.curFood > dogSarah.recFood ? 'much' : 'little'
+//   }`
+// );
 
-//3.
-const ownersEatTooMuch = dogs
-  .filter(dog => dog.curFood < dog.recFood)
-  .flatMap(dog => dog.owners);
-console.log(ownersEatTooLittle);
+// //3.
+// const ownersEatTooMuch = dogs
+//   .filter(dog => dog.curFood < dog.recFood)
+//   .flatMap(dog => dog.owners);
+// console.log(ownersEatTooLittle);
 
-//4.
-"Matilda and Alice and Bob's dogs eat too much!"
-"Sarah and John and Michael's dogs eat tooo little!"
-console.log(`${ownersEatTooMuch.join('and')}'s dogs eat too much!`);
-console.log(`${ownersEatTooLittle.join('and')}'s dogs eat too little!`);
+// //4.
+// "Matilda and Alice and Bob's dogs eat too much!"
+// "Sarah and John and Michael's dogs eat tooo little!"
+// console.log(`${ownersEatTooMuch.join('and')}'s dogs eat too much!`);
+// console.log(`${ownersEatTooLittle.join('and')}'s dogs eat too little!`);
 
-//5.
-console.log(dogs.some(dog => dog.recFood));
+// //5.
+// console.log(dogs.some(dog => dog.recFood));
 
-//6.
-//current > (recommended * 0.90) && current<(recommended * 1.10)
-console.log(dogs.some(dog => dog.curFood > dog.recFood * 0.9 && dog.curFood < dog.recFood * 1.1));
-console.log(dogs.some(checkEatingOkay));
-//7.
-console.log(dogs.filter)(checkEatingOkay);
+// //6.
+// //current > (recommended * 0.90) && current<(recommended * 1.10)
+// console.log(dogs.some(dog => dog.curFood > dog.recFood * 0.9 && dog.curFood < dog.recFood * 1.1));
+// console.log(dogs.some(checkEatingOkay));
+// //7.
+// console.log(dogs.filter)(checkEatingOkay);
 
-//8.
-//sort it by recommended food portion in an ascending order [1,2,3]
-const dogsSorted = dogs.slice().sort((a,b) => a.recFood - b.recFood);
-console.log(dogsSorted);
+// //8.
+// //sort it by recommended food portion in an ascending order [1,2,3]
+// const dogsSorted = dogs.slice().sort((a,b) => a.recFood - b.recFood);
+// console.log(dogsSorted);
