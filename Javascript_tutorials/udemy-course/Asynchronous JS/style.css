@@ -103,7 +103,7 @@ body{
   padding: 2rem 5rem;
   border-radius: 0.7rem;
   color: white;
-  border-color: orangered;
+  background-color: orangered;
   cursor: pointer;
 }
 
