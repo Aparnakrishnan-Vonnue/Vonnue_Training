@@ -51,7 +51,7 @@ export default class View{
     });
   }
 
-  _clear(){
+  _clear() {
     this._parentElement.innerHTML = '';
   }
 
