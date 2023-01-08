@@ -1,5 +1,6 @@
 const testimonialsContainer = document.querySelector(".testimonials-container");
 const testimonial = document.querySelector(".testimonial");
+const username = document.querySelector('.username')
 const userImage = document.querySelector("user-image");
 const role = document.querySelector(".role");
 const testimonials = [
