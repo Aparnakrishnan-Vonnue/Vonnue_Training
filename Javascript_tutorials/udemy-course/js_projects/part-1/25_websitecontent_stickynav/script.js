@@ -15,7 +15,7 @@ const nav = document.querySelector('.nav')
 // //   nav.classList.add('.altcolor')    
 // // })
 
-// window.addEventListener('scroll',fixNav)
+ window.addEventListener('scroll',fixNav)
 
 function fixNav(){
   if(window.scrollY > nav.offsetHeight + 50) {
