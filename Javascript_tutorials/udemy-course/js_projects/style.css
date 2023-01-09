@@ -1,0 +1,33 @@
+body{
+  background-image: linear-gradient(to top , rebeccapurple, rgb(0, 0, 0));
+  
+}
+ul li {
+   list-style: none;
+   margin-top: 20px;
+   margin-bottom: 10px;
+   transform: translateX(200%);
+   transition: transform 0.4s ease;
+   
+   
+  } 
+  
+  ul li a {
+    display: block;
+    text-decoration: none;
+    width: fit-content;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  border: 2px solid gray;
+  max-width: 250px;
+  min-width: 230px;
+  padding: 10px 15px;
+}
+
+ul li a:hover{
+  border: 2px solid white;
+  transform: scale(1.2);
+}
+.list.show{
+  transform: translateX(0);
+}
