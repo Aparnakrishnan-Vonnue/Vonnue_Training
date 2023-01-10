@@ -14,6 +14,8 @@
 //   const bg = document.querySelector('.background')
 //   const loadText = document.querySelector('.loadtext')
 
+const { forEach } = require("lodash-es")
+
 // let load = 0
 // let int = setInterval(blur, 30)
 //  function blur(){
@@ -29,3 +31,34 @@
 //   return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
 // }
 //-------------------------------------------------------
+// const input = document.querySelector('.input')
+// const btn = document.querySelector('.btn')
+
+// btn.addEventListener('click', () => {
+//   input.classList.toggle('active')
+//   btn.classList.toggle('active')
+// })
+// ----------------------------------------------------
+
+// const toggle = document.getElementById("toggle")
+// const nav = document.getElementById("nav")
+// toggle.addEventListener("click", () => nav.classList.toggle("active"))
+//----------------------------------------------------
+const counters = document.querySelectorAll('.counter')
+counters.forEach(counter => {
+  counter.innerText = '0'
+
+  const updateCounter = () => {
+    const target = +counter.getAttribute('data-target ')
+    const c = +counter.innerText
+
+    const increment = target / 1200
+    if(c < target){
+      counter.innerText = `${Math.ceil(c + increment)}`
+      setTimeout(updateCounter,1)
+    }else {
+      counter.innerText = target
+    }
+  }
+  updateCounter()
+})

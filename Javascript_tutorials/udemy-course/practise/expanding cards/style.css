@@ -43,14 +43,130 @@ h3{
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
 body{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  background-color: antiquewhite;
+  color: #8e44ad;
 }
+.counter-container{
+  margin-inline:20px;
+  text-align: center;
+}
+#icon{
+  margin-bottom: 10px;
+}
+@media(max-width:500px){
+  body{
+    flex-direction: column;
+  }
+}
+.counter{
+  font-size: 60px;
+  margin-top: 10px;
+}
+
+/* nav{
+position: relative;
+background-color: #fff;
+padding: 20px;
+width: 80px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 3px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+transition: width 0.6s linear;
+} */
+
+/* nav.active{
+  width: 400px;
+}
+nav.active ul {
+  width: 100%;
+}
+nav ul{
+  display: flex;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  transition : width 0.6s linear;
+}
+nav ul li{
+  list-style-type: none;
+  transform: rotateY(0deg);
+  opacity: 0;
+}
+nav ul li a{
+  text-decoration: none;
+  margin-inline: 20px;
+  color: #5290f9
+}
+nav.active ul li{
+  width: 100%;
+  opacity: 1;
+}
+.icon .line{
+  background-color: #5290f9;
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  top:10px;
+  left: 5px;
+  transition: transform 0.6s linear;
+} */
+/* .icon .line.line2{ */
+  /* margin-top: 5px; */
+  /* top: auto;
+  bottom: 10px;
+} */
+/* .icon{
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+nav.active .icon .line1{
+  transform: rotate(-765deg) translateY(5.5px);
+}
+nav.active .icon .line2{
+  transform: rotate(765deg) translateY(-5.5px);
+} */
+/* #search{
+  padding: 8px 8px;
+  border-radius: 4px;
+  border: 1px solid steelblue;
+}
+input::placeholder{
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+}
+.btn{
+  padding: 9px 10px;
+  position: absolute;
+  right: 180px;
+  background-color: steelblue;
+  border: none;
+  border-radius: 4px;
+}
+.input.active{
+  width: 10px;
+}
+.btn.active{
+  transform: translateX(-108px);
+} */
+
 /* .background{
   background-image: url(img/flower.jpg);
   background-repeat: no-repeat;
